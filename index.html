@@ -1,288 +1,1159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html lang="en" class="h-full">
+ <head><script src="/_sdk/telemetry_sdk.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio website of Sriram G S, Information Technology Student and Aspiring Developer.">
   <meta name="google-site-verification" content="KouxsG6Ufhd-TXXF3GaA425u95-v68sYGFj0MMnxwwc" />
   <title>Sriram G S | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <meta name="description" content="Official portfolio of Sriram G S | Intern @ Infosys Springboard | IT Student @ Karpagam College of Engineering (KCE) | Competitive Programmer | Developer | Projects, Skills, Achievements &amp; Certifications">
+  <meta name="keywords" content="Sriram G S, SriramGS, Sriram-G-S, Sriram, gssriram, gssriram9050, gssriramofficial, Portfolio, Developer, Software Developer, Competitive Programmer, IT Student, Infosys Springboard Intern, Karpagam College of Engineering, KCE, C++, Python, Java, MySQL, Power BI, Data Structures and Algorithms, DSA, Problem Solving, LeetCode, CodeChef, Codeforces, GeeksforGeeks, Coding Ninjas, HackerRank, HackerEarth, Codolio, GitHub, LinkedIn, X, Twitter">
+  <meta name="author" content="Sriram G S">
+  <meta name="theme-color" content="#3b82f6">
+  <meta property="og:title" content="Sriram G S | Portfolio">
+  <meta property="og:description" content="Official portfolio of Sriram G S | Intern @ Infosys Springboard | IT Student @ Karpagam College of Engineering (KCE) | Competitive Programmer | Developer | Projects, Skills, Achievements &amp; Certifications">
+  <meta property="og:image" content="https://res.cloudinary.com/dgbnlfbue/image/upload/v1768587469/f2LsXiJLW4U6fMr0xZLYd.1020.IRZXSOY_xtxbif.jpg">
+  <meta property="og:type" content="website">
+  <meta property="article:published_time" content="2026-01-01T00:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sriram G S | Portfolio">
+  <meta name="twitter:description" content="Official portfolio of Sriram G S | Intern @ Infosys Springboard | IT Student @ Karpagam College of Engineering (KCE) | Competitive Programmer | Developer | Projects, Skills, Achievements &amp; Certifications">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dgbnlfbue/image/upload/v1768587469/f2LsXiJLW4U6fMr0xZLYd.1020.IRZXSOY_xtxbif.jpg">
+  <link rel="canonical" href="https://gssriram.my.canva.site">
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+    
+    body {
+      box-sizing: border-box;
+    }
+    
+    .section-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .section-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    }
+    
+    .section-card:active {
+      transform: translateY(-2px) scale(1.005);
+    }
+    
+    a {
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    a:hover {
+      opacity: 0.7;
+      transform: translateX(2px);
+    }
+    
+    a:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
 
-  <!-- Header and navigation -->
-  <header class="site-header" id="siteHeader">
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="#home" class="brand" aria-label="Sriram G S home">
-        <span class="brand-mark">SG</span>
-        <span>Sriram G S</span>
-      </a>
+    .contact-item {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 12px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      user-select: none;
+    }
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    .contact-item:hover {
+      background-color: rgba(59, 130, 246, 0.1);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
+    }
 
-      <div class="nav-menu" id="navMenu">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
-          <span class="theme-icon">☾</span>
-        </button>
-      </div>
-    </nav>
-  </header>
+    .contact-item:active {
+      transform: translateY(-1px) scale(1.01);
+    }
 
-  <main>
-    <!-- Hero section -->
-    <section class="hero section" id="home">
-      <div class="hero-grid">
-        <div class="hero-content reveal">
-          <p class="eyebrow">Information Technology Student</p>
-          <h1>Hi, I'm <span>Sriram G S</span></h1>
-          <p class="typing-line">
-            <span id="typingText"></span><span class="typing-cursor" aria-hidden="true"></span>
-          </p>
-          <p class="hero-summary">
-            A focused Information Technology student and aspiring developer building clean, responsive, and useful web experiences.
-          </p>
+    .contact-item svg, .contact-item span, .contact-item a {
+      pointer-events: none;
+    }
 
-          <div class="hero-actions">
-            <a class="btn primary-btn" href="#projects">View Projects</a>
-            <a class="btn secondary-btn" href="#contact">Contact Me</a>
-            <a class="btn ghost-btn" href="#" download aria-label="Download resume placeholder">Download Resume</a>
-          </div>
+    .interactive-text {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 8px;
+      border-radius: 8px;
+    }
 
-          <div class="social-row" aria-label="Social links">
-            <a href="https://linkedin.com/in/gssriramofficial" target="_blank" rel="noopener" aria-label="LinkedIn profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.31 8h4.37v14H.31V8Zm7.05 0h4.18v1.91h.06c.58-1.1 2.01-2.26 4.14-2.26 4.43 0 5.25 2.92 5.25 6.71V22h-4.36v-6.78c0-1.62-.03-3.7-2.26-3.7-2.26 0-2.61 1.76-2.61 3.58V22H7.36V8Z"/></svg>
-            </a>
-            <a href="https://github.com/gssriram9050" target="_blank" rel="noopener" aria-label="GitHub profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 8.2 23.88c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
-            </a>
-            <a href="mailto:gssriramofficial@gmail.com" aria-label="Email Sriram">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.4 5.2A2.4 2.4 0 0 1 4.8 2.8h14.4a2.4 2.4 0 0 1 2.4 2.4v13.6a2.4 2.4 0 0 1-2.4 2.4H4.8a2.4 2.4 0 0 1-2.4-2.4V5.2Zm2.4-.4a.4.4 0 0 0-.4.4v.55l7.6 5.08 7.6-5.08V5.2a.4.4 0 0 0-.4-.4H4.8Zm14.8 3.36-6.93 4.63a1.2 1.2 0 0 1-1.34 0L4.4 8.16V18.8c0 .22.18.4.4.4h14.4a.4.4 0 0 0 .4-.4V8.16Z"/></svg>
-            </a>
-          </div>
-        </div>
+    .interactive-text:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    }
 
-        <aside class="hero-card reveal" aria-label="Portfolio highlight card">
-          <div class="orb"></div>
-          <div class="profile-ring">
-            <div class="profile-initials">SGS</div>
-          </div>
-          <h2>Sriram G S</h2>
-          <p>Information Technology Student & Aspiring Developer</p>
-          <div class="mini-stats">
-            <span><strong>2025-2029</strong> B.Tech IT</span>
-            <span><strong>4</strong> Projects</span>
-            <span><strong>Cloud</strong> AWS</span>
-          </div>
-        </aside>
-      </div>
-    </section>
+    .location-item {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 12px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      user-select: none;
+    }
 
-    <!-- About section -->
-    <section class="section reveal" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">About Me</p>
-        <h2>Building a strong foundation in technology.</h2>
-      </div>
-      <div class="about-panel glass-panel">
-        <p>
-          I am Sriram G S, an Information Technology student at Karpagam College of Engineering, Coimbatore. I am learning programming, web technologies, databases, cloud, design tools, and analytics with the goal of becoming a capable developer.
-        </p>
-        <p>
-          This portfolio presents my current skills, certifications, coding profiles, education, and selected project ideas in a simple interview-friendly format.
-        </p>
-      </div>
-    </section>
+    .location-item:hover {
+      background-color: rgba(59, 130, 246, 0.1);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
+    }
 
-    <!-- Skills section -->
-    <section class="section reveal" id="skills">
-      <div class="section-heading">
-        <p class="eyebrow">Skills</p>
-        <h2>Technologies and tools I work with.</h2>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Programming Languages</h3>
-          <div class="tag-list"><span>Python</span><span>C++</span><span>C</span><span>JavaScript</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>Web Technologies</h3>
-          <div class="tag-list"><span>HTML</span><span>CSS</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>Databases</h3>
-          <div class="tag-list"><span>MySQL</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>Cloud</h3>
-          <div class="tag-list"><span>Amazon Web Services (AWS)</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>Tools</h3>
-          <div class="tag-list"><span>Git</span><span>GitHub</span><span>Visual Studio Code</span><span>Dev C++</span><span>Canva</span><span>Figma</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>Data & Analytics</h3>
-          <div class="tag-list"><span>Power BI</span></div>
-        </article>
-      </div>
-    </section>
+    .location-item:active {
+      transform: translateY(-1px) scale(1.01);
+    }
 
-    <!-- Certifications section -->
-    <section class="section reveal" id="certifications">
-      <div class="section-heading">
-        <p class="eyebrow">Certifications</p>
-        <h2>Learning milestones and completed courses.</h2>
-      </div>
-      <div class="timeline-list">
-        <article><span></span><p>Student Learning Assessment - AICTE</p></article>
-        <article><span></span><p>Canva Design School - Canva</p></article>
-        <article><span></span><p>Artificial Intelligence - HP LIFE</p></article>
-        <article><span></span><p>HTML, CSS, JavaScript - LetsUpgrade</p></article>
-        <article><span></span><p>C, Power BI, AWS, Generative AI Studio - Simplilearn</p></article>
-        <article><span></span><p>C Training - Spoken Tutorial</p></article>
-      </div>
-    </section>
+    .location-item span, .location-item * {
+      pointer-events: none;
+    }
+    
+    #profile-picture {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    #profile-picture:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 32px rgba(59, 130, 246, 0.3) !important;
+    }
 
-    <!-- Projects section -->
-    <section class="section reveal" id="projects">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Selected student project work.</h2>
-      </div>
-      <div class="projects-grid">
-        <article class="project-card" data-title="Personal Portfolio Website" data-description="A responsive portfolio website to showcase skills, projects, resume, and contact information with modern UI and interactive features.">
-          <div class="project-number">01</div>
-          <h3>Personal Portfolio Website</h3>
-          <p>A responsive portfolio website to showcase skills, projects, resume, and contact information with modern UI and interactive features.</p>
-          <button class="text-btn open-project" type="button">View Details</button>
-        </article>
-        <article class="project-card" data-title="Task Management Application" data-description="A simple task manager that allows users to add, update, complete, and organize daily tasks with local storage support.">
-          <div class="project-number">02</div>
-          <h3>Task Management Application</h3>
-          <p>A simple task manager that allows users to add, update, complete, and organize daily tasks with local storage support.</p>
-          <button class="text-btn open-project" type="button">View Details</button>
-        </article>
-        <article class="project-card" data-title="E-Commerce Web Application" data-description="A modern shopping website featuring product listings, cart management, and a simulated checkout experience.">
-          <div class="project-number">03</div>
-          <h3>E-Commerce Web Application</h3>
-          <p>A modern shopping website featuring product listings, cart management, and a simulated checkout experience.</p>
-          <button class="text-btn open-project" type="button">View Details</button>
-        </article>
-        <article class="project-card" data-title="Blog Platform with Comments" data-description="A dynamic blog website where users can create posts, interact through comments, and manage content locally.">
-          <div class="project-number">04</div>
-          <h3>Blog Platform with Comments</h3>
-          <p>A dynamic blog website where users can create posts, interact through comments, and manage content locally.</p>
-          <button class="text-btn open-project" type="button">View Details</button>
-        </article>
-      </div>
-    </section>
+    .page-content {
+      animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-    <!-- Coding profiles section -->
-    <section class="section reveal" id="profiles">
-      <div class="section-heading">
-        <p class="eyebrow">Coding Profiles</p>
-        <h2>Practice platforms and developer presence.</h2>
-      </div>
-      <div class="profile-links">
-        <a href="https://leetcode.com/u/gssriram" target="_blank" rel="noopener">LeetCode</a>
-        <a href="https://geeksforgeeks.org/profile/gssriram" target="_blank" rel="noopener">GeeksforGeeks</a>
-        <a href="https://hackerrank.com/profile/gssriram" target="_blank" rel="noopener">HackerRank</a>
-        <a href="https://codechef.com/users/gssriram" target="_blank" rel="noopener">CodeChef</a>
-      </div>
-    </section>
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px);
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0);
+      }
+    }
 
-    <!-- Education section -->
-    <section class="section reveal" id="education">
-      <div class="section-heading">
-        <p class="eyebrow">Education</p>
-        <h2>Academic background.</h2>
-      </div>
-      <article class="education-card glass-panel">
-        <div>
-          <h3>Karpagam College of Engineering</h3>
-          <p>Bachelor of Technology in Information Technology</p>
-          <p>Coimbatore, Tamil Nadu, India</p>
-        </div>
-        <span>2025 - 2029</span>
-      </article>
-    </section>
+    .nav-btn {
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
 
-    <!-- Contact section -->
-    <section class="section reveal" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's connect.</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card glass-panel">
-          <a href="tel:+916383279050">+91 63832 79050</a>
-          <a href="mailto:gssriramofficial@gmail.com">gssriramofficial@gmail.com</a>
-          <a href="https://linkedin.com/in/gssriramofficial" target="_blank" rel="noopener">linkedin.com/in/gssriramofficial</a>
-          <a href="https://github.com/gssriram9050" target="_blank" rel="noopener">github.com/gssriram9050</a>
-        </div>
+    .nav-btn:hover:not(.active) {
+      background-color: rgba(59, 130, 246, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    }
 
-        <form class="contact-form glass-panel" id="contactForm">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" required>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="your@email.com" required>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
-          <button class="btn primary-btn" type="submit">Send Message</button>
-          <p class="form-note" id="formNote" role="status"></p>
-        </form>
-      </div>
-    </section>
-  </main>
+    .nav-btn.active {
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Sriram G S. Built with HTML, CSS, and JavaScript.</p>
-    <button class="text-btn" id="loginOpen" type="button">Student Login Demo</button>
-  </footer>
+    .nav-btn:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
 
-  <!-- Project details modal -->
-  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-card">
-      <button class="modal-close" type="button" data-close-modal aria-label="Close project details">×</button>
-      <p class="eyebrow">Project Details</p>
-      <h3 id="projectModalTitle"></h3>
-      <p id="projectModalDescription"></p>
+    .nav-btn:active {
+      transform: translateY(0);
+    }
+
+    .page-title {
+      font-size: 2rem;
+      animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .skill-badge {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .skill-badge:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .edu-item, .cert-item, .lang-item {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    .edu-item:hover, .cert-item:hover, .lang-item:hover {
+      background-color: rgba(59, 130, 246, 0.05);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    }
+
+    #hero-name {
+      animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .stagger-animation {
+      animation: staggerFade 0.5s ease-out backwards;
+    }
+
+    @keyframes staggerFade {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    main {
+      scroll-behavior: smooth;
+    }
+  </style>
+ </head>
+ <body class="h-full">
+  <nav id="navbar" class="w-full border-b" style="position: sticky; top: 0; z-index: 100;">
+   <div class="max-w-4xl mx-auto px-6 py-4">
+    <div class="flex justify-center gap-2 flex-wrap">
+     <button onclick="navigateToPage('home')" class="nav-btn px-4 py-2 rounded-lg font-medium active" data-page="home">About Me</button> <button onclick="navigateToPage('education')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="education">Education &amp; Languages</button> <button onclick="navigateToPage('skills')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="skills">Skills &amp; Certifications</button> <button onclick="navigateToPage('contact')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="contact">Contact</button>
     </div>
-  </div>
-
-  <!-- Frontend-only mock login modal -->
-  <div class="modal" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
-    <div class="modal-backdrop" data-close-login></div>
-    <div class="modal-card">
-      <button class="modal-close" type="button" data-close-login aria-label="Close login modal">×</button>
-      <p class="eyebrow">Demo Only</p>
-      <h3 id="loginTitle">Frontend Mock Login</h3>
-      <form id="loginForm" class="login-form">
-        <label for="loginEmail">Email</label>
-        <input id="loginEmail" type="email" placeholder="demo@example.com" required>
-        <label for="loginPassword">Password</label>
-        <input id="loginPassword" type="password" placeholder="At least 6 characters" minlength="6" required>
-        <button class="btn primary-btn" type="submit">Validate Login</button>
-        <p class="form-note" id="loginNote" role="status"></p>
+   </div>
+  </nav>
+  <main class="w-full h-full overflow-auto">
+   <div class="max-w-4xl mx-auto px-6 py-12">
+    <div id="page-home" class="page-content">
+     <header class="mb-12 text-center">
+      <div class="flex flex-col items-center gap-6 mb-8">
+       <div id="profile-picture-container" class="flex-shrink-0">
+        <div id="profile-picture" class="w-48 h-48 rounded-2xl overflow-hidden" style="box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);">
+         <img src="https://res.cloudinary.com/dgbnlfbue/image/upload/v1768587469/f2LsXiJLW4U6fMr0xZLYd.1020.IRZXSOY_xtxbif.jpg" alt="Sriram G S - Professional Photo" loading="lazy" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+       </div>
+       <div>
+        <h1 id="hero-name" class="mb-3 font-bold interactive-text">Sriram G S</h1>
+        <p id="hero-tagline" class="mb-3 interactive-text">Information Technology Student | Aspiring Software Developer | Building Foundational Skills in C</p>
+        <div id="hero-location-item" class="location-item inline-flex items-center justify-center gap-2 px-4 py-2" style="text-decoration: none; cursor: pointer;">
+         <span>📍</span> <span id="hero-location-text">Coimbatore, Tamil Nadu, India</span>
+        </div>
+        <div class="mt-6">
+         <a id="resume-button" href="https://www.canvaqr.com/RGEtN-028r" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; white-space: nowrap; cursor: pointer;" onmouseenter="this.style.boxShadow='0 12px 32px rgba(59, 130, 246, 0.4)'; this.style.transform='translateY(-4px) scale(1.05)';" onmouseleave="this.style.boxShadow=''; this.style.transform='translateY(0) scale(1)';" onmousedown="this.style.transform='translateY(-2px) scale(0.95)';" onmouseup="this.style.transform='translateY(-4px) scale(1.05)';">
+          <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; display: inline;">
+           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>View My Resume</a>
+        </div>
+       </div>
+      </div>
+     </header>
+     <section class="mb-10 section-card rounded-lg p-6" style="border-left: 4px solid #3b82f6;">
+      <h2 id="about-title" class="mb-4 font-bold">Summary</h2>
+      <p id="about-description" class="leading-relaxed">As a college fresher pursuing my B.Tech in IT at Karpagam College of Engineering, I'm building on a strong foundation from my computer science background. This early exposure to the field sparked my passion for problem-solving with code, leading me to develop C++, Python, and MySQL skills. I'm currently focused on expanding my knowledge with C and am eager to apply my skills to real-world challenges.</p>
+     </section>
+    </div>
+    <div id="page-education" class="page-content" style="display: none;">
+     <h1 class="mb-8 font-bold text-center page-title">Education &amp; Languages</h1>
+     <section class="section-card rounded-lg p-6 mb-6" style="border-left: 4px solid #3b82f6;">
+      <h2 class="mb-4 font-bold" style="font-size: 1.5rem;">Education</h2>
+      <div class="space-y-6">
+       <div class="edu-item">
+        <div class="flex items-start gap-3">
+         <div class="w-2 h-2 rounded-full mt-2" style="background: #3b82f6;"></div>
+         <div id="education-1" class="flex-1"></div>
+        </div>
+       </div>
+       <div class="edu-item">
+        <div class="flex items-start gap-3">
+         <div class="w-2 h-2 rounded-full mt-2" style="background: #3b82f6;"></div>
+         <div id="education-2" class="flex-1"></div>
+        </div>
+       </div>
+       <div class="edu-item">
+        <div class="flex items-start gap-3">
+         <div class="w-2 h-2 rounded-full mt-2" style="background: #3b82f6;"></div>
+         <div id="education-3" class="flex-1"></div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="section-card rounded-lg p-6 text-center" style="border-left: 4px solid #3b82f6;">
+      <h2 id="languages-title" class="mb-4 font-bold">Languages</h2>
+      <div id="languages-container" class="space-y-2">
+       <p class="lang-item"><strong>Tamil</strong> - Native or Bilingual</p>
+       <p class="lang-item"><strong>English</strong> - Professional Working</p>
+      </div>
+     </section>
+    </div>
+    <div id="page-skills" class="page-content" style="display: none;">
+     <h1 class="mb-8 font-bold text-center page-title">Skills &amp; Certifications</h1>
+     <section class="mb-10 section-card rounded-lg p-6" style="border-left: 4px solid #6b7280;">
+      <h2 id="skills-title" class="mb-4 font-bold">Top Skills</h2>
+      <div id="skills-container" class="flex flex-wrap gap-3"><span class="skill-badge px-4 py-2 rounded-full font-medium">Python</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">C++</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">C</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">MySQL</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">Artificial Intelligence (AI)</span>
+      </div>
+     </section>
+     <section class="mb-10 section-card rounded-lg p-6" style="border-left: 4px solid #6b7280;">
+      <h2 id="certifications-title" class="mb-4 font-bold">Certifications</h2>
+      <ul id="certifications-list" class="space-y-2">
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Meritorious Scholarship Certificate - Karpagam College of Engineering</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>SRISHTI-VIDYUT'25 Innovation Hackathon - Karpagam College of Engineering</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Certificate for the Completion of C Training - Spoken Tutorial, EduPyramids, SINE, IIT Bombay</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>C Programming Basics - Simplilearn</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Introduction to Generative AI Studio - Simplilearn (Powered by "Google Cloud")</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Student Learning Assessment - AICTE</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Canva Design School - Canva</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Artificial Intelligence - HP LIFE</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>HTML, CSS, JavaScript - LetsUpgrade</span></li>
+       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Power BI, AWS - Simplilearn</span></li>
+      </ul>
+     </section>
+     <section class="section-card rounded-lg p-6" style="border-left: 4px solid #6b7280;">
+      <h2 id="coding_profiles_title" class="mb-4 font-bold">Coding Profiles</h2>
+      <div id="coding-profiles-container" class="grid grid-cols-2 gap-4 md:grid-cols-2">
+       <div class="contact-item flex items-center justify-center gap-2">
+        <span style="font-size: 20px;">⚡</span><a id="coding-profile-leetcode-link" href="https://leetcode.com/u/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">LeetCode</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <span style="font-size: 20px;">🧠</span><a id="coding-profile-geeksforgeeks-link" href="https://geeksforgeeks.org/profile/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">GeeksforGeeks</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <span style="font-size: 20px;">🎯</span><a id="coding-profile-hackerrank-link" href="https://hackerrank.com/profile/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">HackerRank</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <span style="font-size: 20px;">👨‍🍳</span><a id="coding-profile-codechef-link" href="https://codechef.com/users/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">CodeChef</a>
+       </div>
+      </div>
+     </section>
+    </div>
+    <div id="page-contact" class="page-content" style="display: none;">
+     <h1 class="mb-8 font-bold text-center page-title">Contact Information</h1>
+     <section class="section-card rounded-lg p-6 text-center" style="border-left: 4px solid #6b7280;">
+      <div class="space-y-3">
+       <div id="contact-address-item" class="contact-item flex items-center justify-center gap-2" style="text-decoration: none; cursor: pointer;">
+        <span>📍</span> <span id="contact-address-text">Dharmapuri, Tamil Nadu, India</span>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <span class="text-xl flex-shrink-0">📱</span> <a id="contact-mobile" href="tel:+916383279050" style="text-decoration: none;">+91 63832 79050</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#EA4335" style="margin-top: 2px;">
+         <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+        </svg><a id="contact-email" href="mailto:gssriramofficial@gmail.com" style="text-decoration: none;">gssriramofficial@gmail.com</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#0A66C2" style="margin-top: 2px;">
+         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg><a id="contact-linkedin" href="https://linkedin.com/in/gssriramofficial" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">linkedin.com/in/gssriramofficial</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="currentColor" style="margin-top: 2px;">
+         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg><a id="contact-github" href="https://github.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">github.com/gssriram9050</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#1877F2" style="margin-top: 2px;">
+         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg><a id="contact-facebook" href="https://facebook.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">facebook.com/gssriram9050</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#E4405F" style="margin-top: 2px;">
+         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg><a id="contact-instagram" href="https://instagram.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">instagram.com/gssriram9050</a>
+       </div>
+       <div class="contact-item flex items-center justify-center gap-2">
+        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="currentColor" style="margin-top: 2px;">
+         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg><a id="contact-x" href="https://x.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">x.com/gssriram9050</a>
+       </div>
+      </div>
+     </section>
+     <section class="section-card rounded-lg p-6 mt-6" style="border-left: 4px solid #6b7280;">
+      <h2 id="message-form-title" class="mb-6 font-bold" style="font-size: 1.5rem;">Send Me a Message</h2>
+      <form id="contact-form" class="space-y-5" onsubmit="handleContactFormSubmit(event)">
+       <div><label for="form-name" class="block mb-2 font-medium text-sm">Full Name <span style="color: #ef4444;">*</span></label> <input type="text" id="form-name" name="name" required class="w-full px-4 py-2 rounded-lg border transition-all duration-200" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="Your full name">
+        <div id="form-name-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
+       </div>
+       <div><label for="form-email" class="block mb-2 font-medium text-sm">Email Address <span style="color: #ef4444;">*</span></label> <input type="email" id="form-email" name="email" required class="w-full px-4 py-2 rounded-lg border transition-all duration-200" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="your@email.com">
+        <div id="form-email-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
+       </div>
+       <div><label for="form-subject" class="block mb-2 font-medium text-sm">Subject <span style="color: #ef4444;">*</span></label> <input type="text" id="form-subject" name="subject" required class="w-full px-4 py-2 rounded-lg border transition-all duration-200" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="What is this about?">
+        <div id="form-subject-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
+       </div>
+       <div><label for="form-message" class="block mb-2 font-medium text-sm">Message <span style="color: #ef4444;">*</span></label> <textarea id="form-message" name="message" required rows="5" class="w-full px-4 py-2 rounded-lg border transition-all duration-200 resize-none" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="Your message here..."></textarea>
+        <div id="form-message-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
+       </div><button type="submit" id="form-submit-btn" class="w-full px-6 py-3 rounded-lg font-medium transition-all duration-300" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; cursor: pointer;">Send Message</button>
+       <div id="form-status" style="display: none; padding: 14px; border-radius: 8px; margin-top: 12px; border-left: 4px solid;"></div>
       </form>
+     </section>
     </div>
-  </div>
+   </div>
+  </main>
+  <footer id="footer" class="w-full border-t" style="position: relative; z-index: 50;">
+   <div class="max-w-4xl mx-auto px-6 py-6">
+    <div class="text-center" style="font-size: 0.875rem;">
+     <p id="footer-text" style="margin: 0;">© Sriram G S • 2026 • All Rights Reserved</p>
+    </div>
+   </div>
+  </footer>
+  <script>
+    let currentPage = 'home';
 
-  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+    function navigateToPage(pageName) {
+      const pages = document.querySelectorAll('.page-content');
+      pages.forEach(page => {
+        page.style.display = 'none';
+      });
 
-  <script src="script.js"></script>
-</body>
+      const selectedPage = document.getElementById(`page-${pageName}`);
+      if (selectedPage) {
+        selectedPage.style.display = 'block';
+        currentPage = pageName;
+      }
+
+      updateNavButtons();
+      document.querySelector('main').scrollTop = 0;
+    }
+
+    function updateNavButtons() {
+      const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+
+      const navButtons = document.querySelectorAll('.nav-btn');
+      navButtons.forEach(btn => {
+        const btnPage = btn.getAttribute('data-page');
+        const isActive = btnPage === currentPage;
+        
+        btn.classList.toggle('active', isActive);
+        btn.style.color = isActive ? '#ffffff' : textColor;
+        btn.style.backgroundColor = isActive ? primaryColor : 'transparent';
+      });
+    }
+
+    const defaultConfig = {
+      background_color: "#0a0a0a",
+      surface_color: "#1a1a1a",
+      text_color: "#e5e5e5",
+      primary_action_color: "#3b82f6",
+      secondary_action_color: "#6b7280",
+      font_family: "system-ui",
+      font_size: 16,
+      hero_name: "Sriram G S",
+      hero_tagline: "Intern @ Infosys Springboard | IT Student @ KCE | 1350+ Problems Solved | 100+ Active Coding Days | LeetCode 1650+ | CodeChef 2★ (1460+) | CodeForces 1130+",
+      hero_location: "Coimbatore, Tamil Nadu, India",
+      about_title: "Summary",
+      about_description: "As someone who pursued Computer Science as my major in higher secondary, I built a strong foundation in C++, Python, and MySQL while earning consecutive centums in Computer Science. This deepened my passion for technology and inspired me to pursue engineering. Due to my dedication and academic performance, I was awarded a merit scholarship from Karpagam College of Engineering, where I am currently pursuing a B.Tech in Information Technology.\n\nDuring my first semester, I strengthened my programming fundamentals through C. In my second semester, I expanded my knowledge into Data Structures and Algorithms, along with HTML, CSS, and JavaScript. As I enter my third semester, I am excited to continue learning and exploring technologies such as Java.\n\nAlongside academics, I have been consistently focused on competitive programming and placement preparation. I have solved 1350+ problems across platforms including LeetCode, CodeChef, Codeforces, GeeksforGeeks, HackerRank, HackerEarth, and Coding Ninjas, helping me strengthen my analytical thinking and problem-solving abilities.\n\nI am currently an Intern at Infosys Springboard, where I continue to gain practical exposure while exploring certifications, training opportunities, and industry-relevant skills. I enjoy learning, building projects, sharing my journey, and continuously improving as a developer and technology professional.",
+      skills_title: "Top Skills",
+      skills_list: "Python, C++, C, MySQL, Artificial Intelligence (AI)",
+      education_title: "Education",
+      education_1: "Karpagam College of Engineering\nBachelor of Technology, Information Technology\n2025 - 2029",
+      education_2: "Sri Venkateswara Matriculation Higher Secondary School\nHSE\n2023 - 2025",
+      education_3: "Venganar Vajram Matriculation Higher Secondary School\nSSLC\n2022 - 2023",
+      certifications_title: "Certifications",
+      certifications_list: "Meritorious Scholarship Certificate - Karpagam College of Engineering|SRISHTI-VIDYUT'25 Innovation Hackathon - Karpagam College of Engineering|Certificate for the Completion of C Training - Spoken Tutorial, EduPyramids, SINE, IIT Bombay|C Programming Basics - Simplilearn|Introduction to Generative AI Studio - Simplilearn (Powered by \"Google Cloud\")|Student Learning Assessment - AICTE|Canva Design School - Canva|Artificial Intelligence - HP LIFE|HTML, CSS, JavaScript - LetsUpgrade|Power BI, AWS - Simplilearn",
+      languages_title: "Languages",
+      languages_list: "Tamil (Native or Bilingual), English (Professional Working)",
+      coding_profiles_title: "Coding Profiles",
+      coding_profile_leetcode: "gssriram",
+      coding_profile_geeksforgeeks: "gssriram",
+      coding_profile_hackerrank: "gssriram",
+      coding_profile_codechef: "gssriram",
+      contact_title: "Contact",
+      contact_address: "Dharmapuri, Tamil Nadu, India",
+      contact_mobile: "+91 63832 79050",
+      contact_email: "gssriramofficial@gmail.com",
+      contact_linkedin: "gssriramofficial",
+      contact_instagram: "gssriram9050",
+      contact_x: "gssriram9050",
+      contact_facebook: "https://facebook.com/gssriram9050",
+      contact_github: "gssriram9050"
+    };
+
+    async function onConfigChange(config) {
+      const baseFontSize = config.font_size || defaultConfig.font_size;
+      const customFont = config.font_family || defaultConfig.font_family;
+      const fontStack = `${customFont}, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`;
+      
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      document.body.style.backgroundColor = backgroundColor;
+      document.querySelector('main').style.backgroundColor = backgroundColor;
+      document.querySelector('main').style.color = textColor;
+      document.querySelector('main').style.fontFamily = fontStack;
+      document.querySelector('main').style.fontSize = `${baseFontSize}px`;
+
+      const navbar = document.getElementById('navbar');
+      navbar.style.backgroundColor = surfaceColor;
+      navbar.style.borderColor = `${secondaryColor}40`;
+
+      const navButtons = document.querySelectorAll('.nav-btn');
+      navButtons.forEach(btn => {
+        const btnPage = btn.getAttribute('data-page');
+        const isActive = btnPage === currentPage;
+        
+        btn.classList.toggle('active', isActive);
+        btn.style.color = isActive ? '#ffffff' : textColor;
+        btn.style.backgroundColor = isActive ? primaryColor : 'transparent';
+        btn.style.fontFamily = fontStack;
+        btn.style.fontSize = `${baseFontSize}px`;
+      });
+
+      const sectionCards = document.querySelectorAll('.section-card');
+      sectionCards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+        card.style.border = `1px solid ${secondaryColor}20`;
+      });
+
+      const pageTitles = document.querySelectorAll('.page-title');
+      pageTitles.forEach(title => {
+        title.style.fontSize = `${baseFontSize * 2}px`;
+        title.style.color = textColor;
+      });
+
+      const heroName = document.getElementById('hero-name');
+      if (heroName) {
+        heroName.textContent = config.hero_name || defaultConfig.hero_name;
+        heroName.style.fontSize = `${baseFontSize * 2.5}px`;
+        heroName.style.color = textColor;
+      }
+
+      const heroTagline = document.getElementById('hero-tagline');
+      if (heroTagline) {
+        heroTagline.textContent = config.hero_tagline || defaultConfig.hero_tagline;
+        heroTagline.style.fontSize = `${baseFontSize * 1.125}px`;
+        heroTagline.style.color = secondaryColor;
+      }
+
+      const heroLocationItem = document.getElementById('hero-location-item');
+      if (heroLocationItem) {
+        const locationText = config.hero_location || defaultConfig.hero_location;
+        document.getElementById('hero-location-text').textContent = locationText;
+        heroLocationItem.onclick = () => window.open(`https://maps.google.com/?q=${encodeURIComponent(locationText)}`, '_blank');
+        heroLocationItem.style.fontSize = `${baseFontSize}px`;
+        heroLocationItem.style.color = primaryColor;
+      }
+
+      const aboutTitle = document.getElementById('about-title');
+      if (aboutTitle) {
+        aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+        aboutTitle.style.fontSize = `${baseFontSize * 1.5}px`;
+        aboutTitle.style.color = textColor;
+      }
+
+      const aboutDescription = document.getElementById('about-description');
+      if (aboutDescription) {
+        aboutDescription.textContent = config.about_description || defaultConfig.about_description;
+        aboutDescription.style.fontSize = `${baseFontSize}px`;
+        aboutDescription.style.color = textColor;
+      }
+
+      const skillsTitle = document.getElementById('skills-title');
+      if (skillsTitle) {
+        skillsTitle.textContent = config.skills_title || defaultConfig.skills_title;
+        skillsTitle.style.fontSize = `${baseFontSize * 1.5}px`;
+        skillsTitle.style.color = textColor;
+      }
+
+      const skillsList = config.skills_list || defaultConfig.skills_list;
+      const skillsArray = skillsList.split(',').map(s => s.trim());
+      const skillsContainer = document.getElementById('skills-container');
+      if (skillsContainer) {
+        skillsContainer.innerHTML = '';
+        skillsArray.forEach((skill) => {
+          const badge = document.createElement('span');
+          badge.className = 'skill-badge px-4 py-2 rounded-full font-medium';
+          badge.textContent = skill;
+          badge.style.backgroundColor = `${primaryColor}20`;
+          badge.style.color = primaryColor;
+          badge.style.fontSize = `${baseFontSize * 0.875}px`;
+          badge.style.border = `1px solid ${primaryColor}40`;
+          skillsContainer.appendChild(badge);
+        });
+      }
+
+      const education1 = document.getElementById('education-1');
+      if (education1) {
+        education1.innerHTML = formatEducation(config.education_1 || defaultConfig.education_1, baseFontSize, textColor, secondaryColor);
+      }
+
+      const education2 = document.getElementById('education-2');
+      if (education2) {
+        education2.innerHTML = formatEducation(config.education_2 || defaultConfig.education_2, baseFontSize, textColor, secondaryColor);
+      }
+
+      const education3 = document.getElementById('education-3');
+      if (education3) {
+        education3.innerHTML = formatEducation(config.education_3 || defaultConfig.education_3, baseFontSize, textColor, secondaryColor);
+      }
+
+      const certificationsTitle = document.getElementById('certifications-title');
+      if (certificationsTitle) {
+        certificationsTitle.textContent = config.certifications_title || defaultConfig.certifications_title;
+        certificationsTitle.style.fontSize = `${baseFontSize * 1.5}px`;
+        certificationsTitle.style.color = textColor;
+      }
+
+      const certificationsList = config.certifications_list || defaultConfig.certifications_list;
+      const certificationsArray = certificationsList.split('|').map(s => s.trim());
+      const certificationsContainer = document.getElementById('certifications-list');
+      if (certificationsContainer) {
+        certificationsContainer.innerHTML = '';
+        certificationsArray.forEach((cert) => {
+          const li = document.createElement('li');
+          li.className = 'cert-item flex items-start gap-2';
+          li.innerHTML = `<span style="color: ${primaryColor}; font-weight: bold;">✓</span><span>${cert}</span>`;
+          li.style.fontSize = `${baseFontSize}px`;
+          li.style.color = textColor;
+          certificationsContainer.appendChild(li);
+        });
+      }
+
+      const languagesTitle = document.getElementById('languages-title');
+      if (languagesTitle) {
+        languagesTitle.textContent = config.languages_title || defaultConfig.languages_title;
+        languagesTitle.style.fontSize = `${baseFontSize * 1.5}px`;
+        languagesTitle.style.color = textColor;
+      }
+
+      const languagesList = config.languages_list || defaultConfig.languages_list;
+      const languagesArray = languagesList.split(',').map(s => s.trim());
+      const languagesContainer = document.getElementById('languages-container');
+      if (languagesContainer) {
+        languagesContainer.innerHTML = '';
+        languagesArray.forEach(lang => {
+          const p = document.createElement('p');
+          p.className = 'lang-item';
+          const parts = lang.split('-').map(s => s.trim());
+          p.innerHTML = `<strong>${parts[0]}</strong>${parts[1] ? ' - ' + parts[1] : ''}`;
+          p.style.fontSize = `${baseFontSize}px`;
+          p.style.color = textColor;
+          languagesContainer.appendChild(p);
+        });
+      }
+
+      const codingProfilesTitle = document.getElementById('coding_profiles_title');
+      if (codingProfilesTitle) {
+        codingProfilesTitle.textContent = config.coding_profiles_title || defaultConfig.coding_profiles_title;
+        codingProfilesTitle.style.fontSize = `${baseFontSize * 1.5}px`;
+        codingProfilesTitle.style.color = textColor;
+      }
+
+      const leetcodeLink = document.getElementById('coding-profile-leetcode-link');
+      if (leetcodeLink) {
+        const leetcodeUsername = config.coding_profile_leetcode || defaultConfig.coding_profile_leetcode;
+        leetcodeLink.href = `https://leetcode.com/u/${leetcodeUsername}`;
+        leetcodeLink.style.fontSize = `${baseFontSize}px`;
+        leetcodeLink.style.color = primaryColor;
+        const leetcodeItem = leetcodeLink.closest('.contact-item');
+        if (leetcodeItem) {
+          attachContactItemClickHandler(leetcodeItem, leetcodeLink.href);
+        }
+      }
+
+      const geeksLink = document.getElementById('coding-profile-geeksforgeeks-link');
+      if (geeksLink) {
+        const geeksUsername = config.coding_profile_geeksforgeeks || defaultConfig.coding_profile_geeksforgeeks;
+        geeksLink.href = `https://geeksforgeeks.org/profile/${geeksUsername}`;
+        geeksLink.style.fontSize = `${baseFontSize}px`;
+        geeksLink.style.color = primaryColor;
+        const geeksItem = geeksLink.closest('.contact-item');
+        if (geeksItem) {
+          attachContactItemClickHandler(geeksItem, geeksLink.href);
+        }
+      }
+
+      const hackerrankLink = document.getElementById('coding-profile-hackerrank-link');
+      if (hackerrankLink) {
+        const hackerrankUsername = config.coding_profile_hackerrank || defaultConfig.coding_profile_hackerrank;
+        hackerrankLink.href = `https://hackerrank.com/profile/${hackerrankUsername}`;
+        hackerrankLink.style.fontSize = `${baseFontSize}px`;
+        hackerrankLink.style.color = primaryColor;
+        const hackerrankItem = hackerrankLink.closest('.contact-item');
+        if (hackerrankItem) {
+          attachContactItemClickHandler(hackerrankItem, hackerrankLink.href);
+        }
+      }
+
+      const codechefLink = document.getElementById('coding-profile-codechef-link');
+      if (codechefLink) {
+        const codechefUsername = config.coding_profile_codechef || defaultConfig.coding_profile_codechef;
+        codechefLink.href = `https://codechef.com/users/${codechefUsername}`;
+        codechefLink.style.fontSize = `${baseFontSize}px`;
+        codechefLink.style.color = primaryColor;
+        const codechefItem = codechefLink.closest('.contact-item');
+        if (codechefItem) {
+          attachContactItemClickHandler(codechefItem, codechefLink.href);
+        }
+      }
+
+      const contactAddress = document.getElementById('contact-address-item');
+      if (contactAddress) {
+        const addressText = config.contact_address || defaultConfig.contact_address;
+        document.getElementById('contact-address-text').textContent = addressText;
+        contactAddress.onclick = () => window.open(`https://maps.google.com/?q=${encodeURIComponent(addressText)}`, '_blank');
+        contactAddress.style.fontSize = `${baseFontSize}px`;
+        contactAddress.style.color = primaryColor;
+      }
+
+      const contactMobile = document.getElementById('contact-mobile');
+      if (contactMobile) {
+        const mobileValue = config.contact_mobile || defaultConfig.contact_mobile;
+        contactMobile.textContent = mobileValue;
+        contactMobile.href = `tel:${mobileValue.replace(/\s/g, '')}`;
+        contactMobile.style.fontSize = `${baseFontSize}px`;
+        contactMobile.style.color = primaryColor;
+        const contactMobileItem = contactMobile.closest('.contact-item');
+        if (contactMobileItem) {
+          attachContactItemClickHandler(contactMobileItem, contactMobile.href);
+        }
+      }
+
+      const contactEmail = document.getElementById('contact-email');
+      if (contactEmail) {
+        const emailValue = config.contact_email || defaultConfig.contact_email;
+        contactEmail.textContent = emailValue;
+        contactEmail.href = `mailto:${emailValue}`;
+        contactEmail.style.fontSize = `${baseFontSize}px`;
+        contactEmail.style.color = primaryColor;
+        const contactEmailItem = contactEmail.closest('.contact-item');
+        if (contactEmailItem) {
+          attachContactItemClickHandler(contactEmailItem, contactEmail.href);
+        }
+      }
+
+      const contactLinkedin = document.getElementById('contact-linkedin');
+      if (contactLinkedin) {
+        const linkedinUsername = config.contact_linkedin || defaultConfig.contact_linkedin;
+        contactLinkedin.textContent = `linkedin.com/in/${linkedinUsername}`;
+        contactLinkedin.href = `https://linkedin.com/in/${linkedinUsername}`;
+        contactLinkedin.style.fontSize = `${baseFontSize}px`;
+        contactLinkedin.style.color = primaryColor;
+        const contactLinkedinItem = contactLinkedin.closest('.contact-item');
+        if (contactLinkedinItem) {
+          attachContactItemClickHandler(contactLinkedinItem, contactLinkedin.href);
+        }
+      }
+
+      const contactInstagram = document.getElementById('contact-instagram');
+      if (contactInstagram) {
+        const instagramUsername = config.contact_instagram || defaultConfig.contact_instagram;
+        contactInstagram.textContent = `instagram.com/${instagramUsername}`;
+        contactInstagram.href = `https://instagram.com/${instagramUsername}`;
+        contactInstagram.style.fontSize = `${baseFontSize}px`;
+        contactInstagram.style.color = primaryColor;
+        const contactInstagramItem = contactInstagram.closest('.contact-item');
+        if (contactInstagramItem) {
+          attachContactItemClickHandler(contactInstagramItem, contactInstagram.href);
+        }
+      }
+
+      const contactX = document.getElementById('contact-x');
+      if (contactX) {
+        const xUsername = config.contact_x || defaultConfig.contact_x;
+        contactX.textContent = `x.com/${xUsername}`;
+        contactX.href = `https://x.com/${xUsername}`;
+        contactX.style.fontSize = `${baseFontSize}px`;
+        contactX.style.color = primaryColor;
+        const contactXItem = contactX.closest('.contact-item');
+        if (contactXItem) {
+          attachContactItemClickHandler(contactXItem, contactX.href);
+        }
+      }
+
+      const contactFacebook = document.getElementById('contact-facebook');
+      if (contactFacebook) {
+        const facebookUrl = config.contact_facebook || defaultConfig.contact_facebook;
+        contactFacebook.textContent = 'facebook.com/gssriram9050';
+        contactFacebook.href = facebookUrl;
+        contactFacebook.style.fontSize = `${baseFontSize}px`;
+        contactFacebook.style.color = primaryColor;
+        const contactFacebookItem = contactFacebook.closest('.contact-item');
+        if (contactFacebookItem) {
+          attachContactItemClickHandler(contactFacebookItem, facebookUrl);
+        }
+      }
+
+      const contactGithub = document.getElementById('contact-github');
+      if (contactGithub) {
+        const githubUsername = config.contact_github || defaultConfig.contact_github;
+        contactGithub.textContent = `github.com/${githubUsername}`;
+        contactGithub.href = `https://github.com/${githubUsername}`;
+        contactGithub.style.fontSize = `${baseFontSize}px`;
+        contactGithub.style.color = primaryColor;
+        const contactGithubItem = contactGithub.closest('.contact-item');
+        if (contactGithubItem) {
+          attachContactItemClickHandler(contactGithubItem, contactGithub.href);
+        }
+      }
+      
+      const resumeButton = document.getElementById('resume-button');
+      if (resumeButton) {
+        resumeButton.style.background = `linear-gradient(135deg, ${primaryColor} 0%, #2563eb 100%)`;
+        resumeButton.style.fontSize = `${baseFontSize * 0.875}px`;
+        resumeButton.style.fontFamily = fontStack;
+      }
+
+      const footer = document.getElementById('footer');
+      if (footer) {
+        footer.style.backgroundColor = surfaceColor;
+        footer.style.borderColor = `${secondaryColor}40`;
+      }
+
+      const footerText = document.getElementById('footer-text');
+      if (footerText) {
+        footerText.style.color = secondaryColor;
+        footerText.style.fontSize = `${baseFontSize * 0.8125}px`;
+        footerText.style.fontFamily = fontStack;
+      }
+    }
+
+    function attachContactItemClickHandler(element, href) {
+      if (!href) return;
+      element.onclick = (e) => {
+        e.preventDefault();
+        window.open(href, '_blank');
+      };
+    }
+
+    function formatEducation(text, baseFontSize, textColor, secondaryColor) {
+      const lines = text.split('\n').map(line => line.trim()).filter(line => line);
+      if (lines.length === 0) return text;
+      
+      let html = '';
+      lines.forEach((line, index) => {
+        if (index === 0) {
+          html += `<strong style="color: ${textColor}; font-size: ${baseFontSize}px;">${line}</strong><br>`;
+        } else if (index === lines.length - 1) {
+          html += `<span style="color: ${secondaryColor}; font-size: ${baseFontSize * 0.875}px;">${line}</span>`;
+        } else {
+          html += `<span style="color: ${textColor}; font-size: ${baseFontSize}px; opacity: 0.9;">${line}</span><br>`;
+        }
+      });
+      
+      return html;
+    }
+
+    async function handleContactFormSubmit(event) {
+      event.preventDefault();
+      
+      const form = document.getElementById('contact-form');
+      const nameInput = document.getElementById('form-name');
+      const emailInput = document.getElementById('form-email');
+      const subjectInput = document.getElementById('form-subject');
+      const messageInput = document.getElementById('form-message');
+      const submitBtn = document.getElementById('form-submit-btn');
+      const statusDiv = document.getElementById('form-status');
+      
+      // Clear all previous errors
+      clearAllErrors();
+      
+      // Validate all fields
+      let isValid = true;
+      
+      // Validate name
+      if (!nameInput.value.trim()) {
+        showFieldError('form-name', 'Please enter your full name');
+        isValid = false;
+      } else if (nameInput.value.trim().length < 2) {
+        showFieldError('form-name', 'Name must be at least 2 characters');
+        isValid = false;
+      }
+      
+      // Validate email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailInput.value.trim()) {
+        showFieldError('form-email', 'Please enter your email address');
+        isValid = false;
+      } else if (!emailRegex.test(emailInput.value.trim())) {
+        showFieldError('form-email', 'Please enter a valid email address (e.g., name@example.com)');
+        isValid = false;
+      }
+      
+      // Validate subject
+      if (!subjectInput.value.trim()) {
+        showFieldError('form-subject', 'Please enter a subject line');
+        isValid = false;
+      }
+      
+      // Validate message
+      if (!messageInput.value.trim()) {
+        showFieldError('form-message', 'Please enter your message');
+        isValid = false;
+      }
+      
+      if (!isValid) {
+        return;
+      }
+      
+      // Disable submit button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.style.opacity = '0.7';
+      statusDiv.style.display = 'none';
+      
+      // Prepare form data with portfolio context
+      const formData = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        subject: subjectInput.value.trim(),
+        message: messageInput.value.trim(),
+        source: 'portfolio_contact_form',
+        received_at: new Date().toISOString()
+      };
+      
+      // Save to Canva Sheet using Data SDK
+      const result = await window.dataSdk.create(formData);
+      
+      if (result.isOk) {
+        // Show success message with professional template
+        statusDiv.style.backgroundColor = 'rgba(34, 197, 94, 0.15)';
+        statusDiv.style.color = '#22c55e';
+        statusDiv.style.borderColor = '#22c55e';
+        statusDiv.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 20px;">✓</span>
+            <div style="text-align: left;">
+              <div style="font-weight: 600; margin-bottom: 2px;">Message Received Successfully!</div>
+              <div style="font-size: 0.875rem; opacity: 0.9;">I'll review your message and get back to you within 24-48 hours at <strong>${emailInput.value.trim()}</strong></div>
+            </div>
+          </div>
+        `;
+        statusDiv.style.display = 'block';
+        
+        // Reset form
+        form.reset();
+        clearAllErrors();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        submitBtn.style.opacity = '1';
+        
+        // Hide success message after 6 seconds
+        setTimeout(() => {
+          statusDiv.style.display = 'none';
+        }, 6000);
+      } else {
+        // Show error message
+        statusDiv.style.backgroundColor = 'rgba(239, 68, 68, 0.15)';
+        statusDiv.style.color = '#ef4444';
+        statusDiv.style.borderColor = '#ef4444';
+        statusDiv.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 20px;">✕</span>
+            <div style="text-align: left;">
+              <div style="font-weight: 600; margin-bottom: 2px;">Unable to Send Message</div>
+              <div style="font-size: 0.875rem; opacity: 0.9;">Please try again or contact me directly via email</div>
+            </div>
+          </div>
+        `;
+        statusDiv.style.display = 'block';
+        
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        submitBtn.style.opacity = '1';
+      }
+    }
+    
+    function showFieldError(fieldId, errorMessage) {
+      const field = document.getElementById(fieldId);
+      const errorDiv = document.getElementById(fieldId + '-error');
+      
+      // Highlight field with error
+      field.style.borderColor = '#ef4444';
+      field.style.backgroundColor = 'rgba(239, 68, 68, 0.08)';
+      
+      // Show error message
+      errorDiv.textContent = errorMessage;
+      errorDiv.style.display = 'block';
+      
+      // Scroll to first error field
+      field.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      // Add focus and hover behavior to help user correct
+      field.addEventListener('focus', () => {
+        if (field.value.trim() === '') {
+          field.style.borderColor = '#3b82f6';
+          field.style.backgroundColor = 'rgba(59, 130, 246, 0.08)';
+        }
+      });
+      
+      field.addEventListener('blur', () => {
+        if (field.value.trim() === '') {
+          field.style.borderColor = '#ef4444';
+          field.style.backgroundColor = 'rgba(239, 68, 68, 0.08)';
+        } else {
+          field.style.borderColor = '#22c55e';
+          field.style.backgroundColor = 'rgba(34, 197, 94, 0.08)';
+          errorDiv.style.display = 'none';
+        }
+      });
+      
+      field.addEventListener('input', () => {
+        if (field.value.trim() !== '') {
+          field.style.borderColor = '#22c55e';
+          field.style.backgroundColor = 'rgba(34, 197, 94, 0.08)';
+          errorDiv.style.display = 'none';
+        }
+      });
+    }
+    
+    function clearAllErrors() {
+      ['form-name', 'form-email', 'form-subject', 'form-message'].forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        const errorDiv = document.getElementById(fieldId + '-error');
+        
+        field.style.borderColor = '#6b7280';
+        field.style.backgroundColor = 'rgba(107, 114, 128, 0.1)';
+        errorDiv.style.display = 'none';
+        errorDiv.textContent = '';
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_name", config.hero_name || defaultConfig.hero_name],
+        ["hero_tagline", config.hero_tagline || defaultConfig.hero_tagline],
+        ["hero_location", config.hero_location || defaultConfig.hero_location],
+        ["about_title", config.about_title || defaultConfig.about_title],
+        ["about_description", config.about_description || defaultConfig.about_description],
+        ["skills_title", config.skills_title || defaultConfig.skills_title],
+        ["skills_list", config.skills_list || defaultConfig.skills_list],
+        ["education_title", config.education_title || defaultConfig.education_title],
+        ["education_1", config.education_1 || defaultConfig.education_1],
+        ["education_2", config.education_2 || defaultConfig.education_2],
+        ["education_3", config.education_3 || defaultConfig.education_3],
+        ["certifications_title", config.certifications_title || defaultConfig.certifications_title],
+        ["certifications_list", config.certifications_list || defaultConfig.certifications_list],
+        ["languages_title", config.languages_title || defaultConfig.languages_title],
+        ["languages_list", config.languages_list || defaultConfig.languages_list],
+        ["coding_profiles_title", config.coding_profiles_title || defaultConfig.coding_profiles_title],
+        ["coding_profile_leetcode", config.coding_profile_leetcode || defaultConfig.coding_profile_leetcode],
+        ["coding_profile_geeksforgeeks", config.coding_profile_geeksforgeeks || defaultConfig.coding_profile_geeksforgeeks],
+        ["coding_profile_hackerrank", config.coding_profile_hackerrank || defaultConfig.coding_profile_hackerrank],
+        ["coding_profile_codechef", config.coding_profile_codechef || defaultConfig.coding_profile_codechef],
+        ["contact_title", config.contact_title || defaultConfig.contact_title],
+        ["contact_address", config.contact_address || defaultConfig.contact_address],
+        ["contact_mobile", config.contact_mobile || defaultConfig.contact_mobile],
+        ["contact_email", config.contact_email || defaultConfig.contact_email],
+        ["contact_linkedin", config.contact_linkedin || defaultConfig.contact_linkedin],
+        ["contact_instagram", config.contact_instagram || defaultConfig.contact_instagram],
+        ["contact_x", config.contact_x || defaultConfig.contact_x],
+        ["contact_facebook", config.contact_facebook || defaultConfig.contact_facebook],
+        ["contact_github", config.contact_github || defaultConfig.contact_github]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Initialize Data SDK
+    if (window.dataSdk) {
+      const dataHandler = {
+        onDataChanged(data) {
+          // Data handler - just stores the data, no UI needed for write-only form
+        }
+      };
+      window.dataSdk.init(dataHandler);
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a097a4794c2d1699',t:'MTc4MTA4NjgxNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
