@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head><script src="/_sdk/telemetry_sdk.js"></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="KouxsG6Ufhd-TXXF3GaA425u95-v68sYGFj0MMnxwwc" />
+  <meta name="google-site-verification" content="0IjDTYSFIyZlUf3Xw5AqRNPZdSNS-LspZ90a-w3OXX8">
   <title>Sriram G S | Portfolio</title>
   <meta name="description" content="Official portfolio of Sriram G S | Intern @ Infosys Springboard | IT Student @ Karpagam College of Engineering (KCE) | Competitive Programmer | Developer | Projects, Skills, Achievements &amp; Certifications">
   <meta name="keywords" content="Sriram G S, SriramGS, Sriram-G-S, Sriram, gssriram, gssriram9050, gssriramofficial, Portfolio, Developer, Software Developer, Competitive Programmer, IT Student, Infosys Springboard Intern, Karpagam College of Engineering, KCE, C++, Python, Java, MySQL, Power BI, Data Structures and Algorithms, DSA, Problem Solving, LeetCode, CodeChef, Codeforces, GeeksforGeeks, Coding Ninjas, HackerRank, HackerEarth, Codolio, GitHub, LinkedIn, X, Twitter">
@@ -25,41 +25,29 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <style>
     * { box-sizing: border-box; }
-    html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
-    
-    body {
-      box-sizing: border-box;
-    }
-    
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: #0a0a0a; color: #e5e5e5; }
+
+    body { box-sizing: border-box; background-color: #0a0a0a; }
+
     .section-card {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
     }
-    
     .section-card:hover {
       transform: translateY(-4px) scale(1.01);
       box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
     }
-    
     .section-card:active {
       transform: translateY(-2px) scale(1.005);
     }
-    
+
     a {
       transition: all 0.2s ease;
       cursor: pointer;
       position: relative;
     }
-    
-    a:hover {
-      opacity: 0.7;
-      transform: translateX(2px);
-    }
-    
-    a:focus {
-      outline: 2px solid #3b82f6;
-      outline-offset: 2px;
-    }
+    a:hover { opacity: 0.7; transform: translateX(2px); }
+    a:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
 
     .contact-item {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,27 +60,19 @@
       gap: 8px;
       user-select: none;
     }
-
     .contact-item:hover {
       background-color: rgba(59, 130, 246, 0.1);
       transform: translateY(-3px) scale(1.03);
       box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
     }
-
-    .contact-item:active {
-      transform: translateY(-1px) scale(1.01);
-    }
-
-    .contact-item svg, .contact-item span, .contact-item a {
-      pointer-events: none;
-    }
+    .contact-item:active { transform: translateY(-1px) scale(1.01); }
+    .contact-item svg, .contact-item span, .contact-item a { pointer-events: none; }
 
     .interactive-text {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       padding: 8px;
       border-radius: 8px;
     }
-
     .interactive-text:hover {
       transform: scale(1.02);
       box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
@@ -109,43 +89,27 @@
       gap: 8px;
       user-select: none;
     }
-
     .location-item:hover {
       background-color: rgba(59, 130, 246, 0.1);
       transform: translateY(-3px) scale(1.03);
       box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
     }
+    .location-item:active { transform: translateY(-1px) scale(1.01); }
+    .location-item span, .location-item * { pointer-events: none; }
 
-    .location-item:active {
-      transform: translateY(-1px) scale(1.01);
-    }
-
-    .location-item span, .location-item * {
-      pointer-events: none;
-    }
-    
     #profile-picture {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
     #profile-picture:hover {
       transform: scale(1.05);
       box-shadow: 0 12px 32px rgba(59, 130, 246, 0.3) !important;
     }
 
-    .page-content {
-      animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    .page-content { animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
 
     @keyframes fadeInUp {
-      from { 
-        opacity: 0; 
-        transform: translateY(20px);
-      }
-      to { 
-        opacity: 1; 
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .nav-btn {
@@ -153,48 +117,31 @@
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
     }
-
     .nav-btn:hover:not(.active) {
       background-color: rgba(59, 130, 246, 0.15);
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
     }
-
     .nav-btn.active {
       font-weight: 600;
       box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
     }
-
-    .nav-btn:focus {
-      outline: 2px solid #3b82f6;
-      outline-offset: 2px;
-    }
-
-    .nav-btn:active {
-      transform: translateY(0);
-    }
+    .nav-btn:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+    .nav-btn:active { transform: translateY(0); }
 
     .page-title {
       font-size: 2rem;
       animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
     .skill-badge {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
     }
-
     .skill-badge:hover {
       transform: translateY(-2px) scale(1.05);
       box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
@@ -205,263 +152,306 @@
       padding: 8px;
       border-radius: 8px;
     }
-
     .edu-item:hover, .cert-item:hover, .lang-item:hover {
       background-color: rgba(59, 130, 246, 0.05);
       transform: translateY(-2px) scale(1.02);
       box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
     }
 
-    #hero-name {
-      animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
+    #hero-name { animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
     @keyframes fadeInScale {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
 
-    .stagger-animation {
-      animation: staggerFade 0.5s ease-out backwards;
-    }
-
+    .stagger-animation { animation: staggerFade 0.5s ease-out backwards; }
     @keyframes staggerFade {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    main {
-      scroll-behavior: smooth;
+    main { scroll-behavior: smooth; background-color: #0a0a0a; }
+
+    /* Form input styles */
+    input, textarea {
+      background-color: rgba(107, 114, 128, 0.1);
+      border: 1px solid #6b7280;
+      color: #e5e5e5;
+      border-radius: 8px;
+      padding: 10px 16px;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+      transition: border-color 0.2s, background-color 0.2s;
     }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #3b82f6;
+      background-color: rgba(59, 130, 246, 0.08);
+    }
+    input::placeholder, textarea::placeholder { color: #6b7280; }
   </style>
- </head>
- <body class="h-full">
-  <nav id="navbar" class="w-full border-b" style="position: sticky; top: 0; z-index: 100;">
-   <div class="max-w-4xl mx-auto px-6 py-4">
-    <div class="flex justify-center gap-2 flex-wrap">
-     <button onclick="navigateToPage('home')" class="nav-btn px-4 py-2 rounded-lg font-medium active" data-page="home">About Me</button> <button onclick="navigateToPage('education')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="education">Education &amp; Languages</button> <button onclick="navigateToPage('skills')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="skills">Skills &amp; Certifications</button> <button onclick="navigateToPage('contact')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="contact">Contact</button>
+</head>
+<body class="h-full">
+
+  <nav id="navbar" class="w-full border-b" style="position: sticky; top: 0; z-index: 100; background-color: #1a1a1a; border-color: rgba(107,114,128,0.25);">
+    <div class="max-w-4xl mx-auto px-6 py-4">
+      <div class="flex justify-center gap-2 flex-wrap">
+        <button onclick="navigateToPage('home')" class="nav-btn px-4 py-2 rounded-lg font-medium active" data-page="home" style="background-color:#3b82f6;color:#fff;">About Me</button>
+        <button onclick="navigateToPage('education')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="education" style="background-color:transparent;color:#e5e5e5;">Education &amp; Languages</button>
+        <button onclick="navigateToPage('skills')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="skills" style="background-color:transparent;color:#e5e5e5;">Skills &amp; Certifications</button>
+        <button onclick="navigateToPage('contact')" class="nav-btn px-4 py-2 rounded-lg font-medium" data-page="contact" style="background-color:transparent;color:#e5e5e5;">Contact</button>
+      </div>
     </div>
-   </div>
   </nav>
-  <main class="w-full h-full overflow-auto">
-   <div class="max-w-4xl mx-auto px-6 py-12">
-    <div id="page-home" class="page-content">
-     <header class="mb-12 text-center">
-      <div class="flex flex-col items-center gap-6 mb-8">
-       <div id="profile-picture-container" class="flex-shrink-0">
-        <div id="profile-picture" class="w-48 h-48 rounded-2xl overflow-hidden" style="box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);">
-         <img src="https://res.cloudinary.com/dgbnlfbue/image/upload/v1768587469/f2LsXiJLW4U6fMr0xZLYd.1020.IRZXSOY_xtxbif.jpg" alt="Sriram G S - Professional Photo" loading="lazy" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-       </div>
-       <div>
-        <h1 id="hero-name" class="mb-3 font-bold interactive-text">Sriram G S</h1>
-        <p id="hero-tagline" class="mb-3 interactive-text">Information Technology Student | Aspiring Software Developer | Building Foundational Skills in C</p>
-        <div id="hero-location-item" class="location-item inline-flex items-center justify-center gap-2 px-4 py-2" style="text-decoration: none; cursor: pointer;">
-         <span>📍</span> <span id="hero-location-text">Coimbatore, Tamil Nadu, India</span>
-        </div>
-        <div class="mt-6">
-         <a id="resume-button" href="https://www.canvaqr.com/RGEtN-028r" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; white-space: nowrap; cursor: pointer;" onmouseenter="this.style.boxShadow='0 12px 32px rgba(59, 130, 246, 0.4)'; this.style.transform='translateY(-4px) scale(1.05)';" onmouseleave="this.style.boxShadow=''; this.style.transform='translateY(0) scale(1)';" onmousedown="this.style.transform='translateY(-2px) scale(0.95)';" onmouseup="this.style.transform='translateY(-4px) scale(1.05)';">
-          <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; display: inline;">
-           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> <polyline points="14 2 14 8 20 8"></polyline>
-          </svg>View My Resume</a>
-        </div>
-       </div>
+
+  <main class="w-full h-full overflow-auto" style="background-color:#0a0a0a;color:#e5e5e5;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:16px;">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+
+      <!-- HOME PAGE -->
+      <div id="page-home" class="page-content">
+        <header class="mb-12 text-center">
+          <div class="flex flex-col items-center gap-6 mb-8">
+            <div id="profile-picture-container" class="flex-shrink-0">
+              <div id="profile-picture" class="w-48 h-48 rounded-2xl" style="box-shadow:0 8px 24px rgba(59,130,246,0.2);background-image:url('https://res.cloudinary.com/dgbnlfbue/image/upload/v1768587469/f2LsXiJLW4U6fMr0xZLYd.1020.IRZXSOY_xtxbif.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#1a1a1a;">
+                <img src="https://res.cloudinary.com/dgbnlfbue/image/upload/v1768587469/f2LsXiJLW4U6fMr0xZLYd.1020.IRZXSOY_xtxbif.jpg"
+                     alt="Sriram G S - Professional Photo"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block;">
+              </div>
+            </div>
+            <div>
+              <h1 id="hero-name" class="mb-3 font-bold interactive-text" style="font-size:2.5rem;color:#e5e5e5;">Sriram G S</h1>
+              <p id="hero-tagline" class="mb-3 interactive-text" style="font-size:1.125rem;color:#6b7280;">Intern @ Infosys Springboard | IT Student @ KCE | 1350+ Problems Solved | 100+ Active Coding Days | LeetCode 1650+ | CodeChef 2&#9733; (1460+) | CodeForces 1130+</p>
+              <div id="hero-location-item" class="location-item inline-flex items-center justify-center gap-2 px-4 py-2" style="color:#3b82f6;cursor:pointer;">
+                <span>&#128205;</span>
+                <span id="hero-location-text">Coimbatore, Tamil Nadu, India</span>
+              </div>
+              <div class="mt-6">
+                <a id="resume-button"
+                   href="https://www.canvaqr.com/RGEtN-028r"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium"
+                   style="background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);color:white;text-decoration:none;white-space:nowrap;cursor:pointer;font-size:0.875rem;transition:all 0.3s;"
+                   onmouseenter="this.style.boxShadow='0 12px 32px rgba(59,130,246,0.4)';this.style.transform='translateY(-4px) scale(1.05)';"
+                   onmouseleave="this.style.boxShadow='';this.style.transform='translateY(0) scale(1)';"
+                   onmousedown="this.style.transform='translateY(-2px) scale(0.95)';"
+                   onmouseup="this.style.transform='translateY(-4px) scale(1.05)';">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                  </svg>
+                  View My Resume
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="mb-10 section-card rounded-lg p-6" style="border-left:4px solid #3b82f6;background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #3b82f6;">
+          <h2 id="about-title" class="mb-4 font-bold" style="font-size:1.5rem;color:#e5e5e5;">Summary</h2>
+          <p id="about-description" class="leading-relaxed" style="font-size:1rem;color:#e5e5e5;white-space:pre-line;"></p>
+        </section>
       </div>
-     </header>
-     <section class="mb-10 section-card rounded-lg p-6" style="border-left: 4px solid #3b82f6;">
-      <h2 id="about-title" class="mb-4 font-bold">Summary</h2>
-      <p id="about-description" class="leading-relaxed">As a college fresher pursuing my B.Tech in IT at Karpagam College of Engineering, I'm building on a strong foundation from my computer science background. This early exposure to the field sparked my passion for problem-solving with code, leading me to develop C++, Python, and MySQL skills. I'm currently focused on expanding my knowledge with C and am eager to apply my skills to real-world challenges.</p>
-     </section>
+
+      <!-- EDUCATION PAGE -->
+      <div id="page-education" class="page-content" style="display:none;">
+        <h1 class="mb-8 font-bold text-center page-title" style="color:#e5e5e5;">Education &amp; Languages</h1>
+        <section class="section-card rounded-lg p-6 mb-6" style="border-left:4px solid #3b82f6;background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #3b82f6;">
+          <h2 class="mb-4 font-bold" style="font-size:1.5rem;color:#e5e5e5;">Education</h2>
+          <div class="space-y-6">
+            <div class="edu-item">
+              <div class="flex items-start gap-3">
+                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background:#3b82f6;"></div>
+                <div id="education-1" class="flex-1"></div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="flex items-start gap-3">
+                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background:#3b82f6;"></div>
+                <div id="education-2" class="flex-1"></div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="flex items-start gap-3">
+                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background:#3b82f6;"></div>
+                <div id="education-3" class="flex-1"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-card rounded-lg p-6 text-center" style="border-left:4px solid #3b82f6;background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #3b82f6;">
+          <h2 id="languages-title" class="mb-4 font-bold" style="font-size:1.5rem;color:#e5e5e5;">Languages</h2>
+          <div id="languages-container" class="space-y-2"></div>
+        </section>
+      </div>
+
+      <!-- SKILLS PAGE -->
+      <div id="page-skills" class="page-content" style="display:none;">
+        <h1 class="mb-8 font-bold text-center page-title" style="color:#e5e5e5;">Skills &amp; Certifications</h1>
+        <section class="mb-10 section-card rounded-lg p-6" style="border-left:4px solid #6b7280;background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #6b7280;">
+          <h2 id="skills-title" class="mb-4 font-bold" style="font-size:1.5rem;color:#e5e5e5;">Top Skills</h2>
+          <div id="skills-container" class="flex flex-wrap gap-3"></div>
+        </section>
+        <section class="mb-10 section-card rounded-lg p-6" style="border-left:4px solid #6b7280;background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #6b7280;">
+          <h2 id="certifications-title" class="mb-4 font-bold" style="font-size:1.5rem;color:#e5e5e5;">Certifications</h2>
+          <ul id="certifications-list" class="space-y-2"></ul>
+        </section>
+        <section class="section-card rounded-lg p-6" style="border-left:4px solid #6b7280;background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #6b7280;">
+          <h2 id="coding_profiles_title" class="mb-4 font-bold" style="font-size:1.5rem;color:#e5e5e5;">Coding Profiles</h2>
+          <div id="coding-profiles-container" class="grid grid-cols-2 gap-4">
+            <div class="contact-item flex items-center justify-center gap-2">
+              <span style="font-size:20px;">&#9889;</span>
+              <a id="coding-profile-leetcode-link" href="https://leetcode.com/u/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">LeetCode</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <span style="font-size:20px;">&#129504;</span>
+              <a id="coding-profile-geeksforgeeks-link" href="https://geeksforgeeks.org/profile/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">GeeksforGeeks</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <span style="font-size:20px;">&#127919;</span>
+              <a id="coding-profile-hackerrank-link" href="https://hackerrank.com/profile/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">HackerRank</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <span style="font-size:20px;">&#128104;&#8205;&#127859;</span>
+              <a id="coding-profile-codechef-link" href="https://codechef.com/users/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">CodeChef</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CONTACT PAGE -->
+      <div id="page-contact" class="page-content" style="display:none;">
+        <h1 class="mb-8 font-bold text-center page-title" style="color:#e5e5e5;">Contact Information</h1>
+        <section class="section-card rounded-lg p-6 text-center" style="border-left:4px solid #6b7280;background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #6b7280;">
+          <div class="space-y-3">
+            <div id="contact-address-item" class="contact-item flex items-center justify-center gap-2" style="color:#3b82f6;cursor:pointer;">
+              <span>&#128205;</span>
+              <span id="contact-address-text">Dharmapuri, Tamil Nadu, India</span>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <span class="text-xl flex-shrink-0">&#128241;</span>
+              <a id="contact-mobile" href="tel:+916383279050" style="text-decoration:none;color:#3b82f6;">+91 63832 79050</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="#EA4335" style="margin-top:2px;">
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+              </svg>
+              <a id="contact-email" href="mailto:gssriramofficial@gmail.com" style="text-decoration:none;color:#3b82f6;">gssriramofficial@gmail.com</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2" style="margin-top:2px;">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              <a id="contact-linkedin" href="https://linkedin.com/in/gssriramofficial" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">linkedin.com/in/gssriramofficial</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-top:2px;color:#e5e5e5;">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <a id="contact-github" href="https://github.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">github.com/gssriram9050</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" style="margin-top:2px;">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <a id="contact-facebook" href="https://facebook.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">facebook.com/gssriram9050</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="#E4405F" style="margin-top:2px;">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <a id="contact-instagram" href="https://instagram.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">instagram.com/gssriram9050</a>
+            </div>
+            <div class="contact-item flex items-center justify-center gap-2">
+              <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-top:2px;color:#e5e5e5;">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <a id="contact-x" href="https://x.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#3b82f6;">x.com/gssriram9050</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card rounded-lg mt-6" style="background-color:#1a1a1a;border:1px solid rgba(107,114,128,0.12);border-left:4px solid #3b82f6;overflow:hidden;">
+          <!-- Form header with gradient banner -->
+          <div style="background:linear-gradient(135deg,rgba(59,130,246,0.15) 0%,rgba(37,99,235,0.05) 100%);padding:24px 28px 20px;border-bottom:1px solid rgba(107,114,128,0.15);">
+            <h2 id="message-form-title" style="font-size:1.4rem;font-weight:700;color:#e5e5e5;margin:0 0 4px 0;">&#9993; Send Me a Message</h2>
+            <p style="color:#6b7280;font-size:0.875rem;margin:0;">I typically reply within 24–48 hours.</p>
+          </div>
+
+          <div id="contact-form" style="padding:28px;">
+            <!-- Name + Email side by side on larger screens -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;" class="form-row">
+              <div>
+                <label for="form-name" style="display:block;margin-bottom:6px;font-size:0.8rem;font-weight:600;color:#9ca3af;letter-spacing:0.05em;text-transform:uppercase;">Full Name <span style="color:#ef4444;">*</span></label>
+                <div style="position:relative;">
+                  <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none;">&#128100;</span>
+                  <input type="text" id="form-name" name="name" placeholder="Your full name" style="padding-left:38px;">
+                </div>
+                <div id="form-name-error" style="color:#ef4444;font-size:0.78rem;margin-top:5px;display:none;padding-left:2px;"></div>
+              </div>
+              <div>
+                <label for="form-email" style="display:block;margin-bottom:6px;font-size:0.8rem;font-weight:600;color:#9ca3af;letter-spacing:0.05em;text-transform:uppercase;">Email Address <span style="color:#ef4444;">*</span></label>
+                <div style="position:relative;">
+                  <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none;">&#9993;</span>
+                  <input type="email" id="form-email" name="email" placeholder="your@email.com" style="padding-left:38px;">
+                </div>
+                <div id="form-email-error" style="color:#ef4444;font-size:0.78rem;margin-top:5px;display:none;padding-left:2px;"></div>
+              </div>
+            </div>
+
+            <!-- Subject -->
+            <div style="margin-bottom:16px;">
+              <label for="form-subject" style="display:block;margin-bottom:6px;font-size:0.8rem;font-weight:600;color:#9ca3af;letter-spacing:0.05em;text-transform:uppercase;">Subject <span style="color:#ef4444;">*</span></label>
+              <div style="position:relative;">
+                <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none;">&#128196;</span>
+                <input type="text" id="form-subject" name="subject" placeholder="What's this about?" style="padding-left:38px;">
+              </div>
+              <div id="form-subject-error" style="color:#ef4444;font-size:0.78rem;margin-top:5px;display:none;padding-left:2px;"></div>
+            </div>
+
+            <!-- Message -->
+            <div style="margin-bottom:24px;">
+              <label for="form-message" style="display:block;margin-bottom:6px;font-size:0.8rem;font-weight:600;color:#9ca3af;letter-spacing:0.05em;text-transform:uppercase;">Message <span style="color:#ef4444;">*</span></label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Write your message here..." style="resize:vertical;min-height:120px;"></textarea>
+              <div id="form-message-error" style="color:#ef4444;font-size:0.78rem;margin-top:5px;display:none;padding-left:2px;"></div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="button" id="form-submit-btn" onclick="handleContactFormSubmit()"
+              style="width:100%;padding:14px 24px;border-radius:10px;font-weight:600;font-size:1rem;background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);color:white;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:10px;transition:all 0.3s;box-shadow:0 4px 16px rgba(59,130,246,0.25);"
+              onmouseenter="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(59,130,246,0.4)';"
+              onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(59,130,246,0.25)';"
+              onmousedown="this.style.transform='translateY(0) scale(0.98)';"
+              onmouseup="this.style.transform='translateY(-2px) scale(1)';">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+
+            <!-- Status message -->
+            <div id="form-status" style="display:none;margin-top:16px;padding:16px 18px;border-radius:10px;border-left:4px solid;"></div>
+          </div>
+        </section>
+
+        <style>
+          @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr !important; }
+          }
+        </style>
+      </div>
+
     </div>
-    <div id="page-education" class="page-content" style="display: none;">
-     <h1 class="mb-8 font-bold text-center page-title">Education &amp; Languages</h1>
-     <section class="section-card rounded-lg p-6 mb-6" style="border-left: 4px solid #3b82f6;">
-      <h2 class="mb-4 font-bold" style="font-size: 1.5rem;">Education</h2>
-      <div class="space-y-6">
-       <div class="edu-item">
-        <div class="flex items-start gap-3">
-         <div class="w-2 h-2 rounded-full mt-2" style="background: #3b82f6;"></div>
-         <div id="education-1" class="flex-1"></div>
-        </div>
-       </div>
-       <div class="edu-item">
-        <div class="flex items-start gap-3">
-         <div class="w-2 h-2 rounded-full mt-2" style="background: #3b82f6;"></div>
-         <div id="education-2" class="flex-1"></div>
-        </div>
-       </div>
-       <div class="edu-item">
-        <div class="flex items-start gap-3">
-         <div class="w-2 h-2 rounded-full mt-2" style="background: #3b82f6;"></div>
-         <div id="education-3" class="flex-1"></div>
-        </div>
-       </div>
-      </div>
-     </section>
-     <section class="section-card rounded-lg p-6 text-center" style="border-left: 4px solid #3b82f6;">
-      <h2 id="languages-title" class="mb-4 font-bold">Languages</h2>
-      <div id="languages-container" class="space-y-2">
-       <p class="lang-item"><strong>Tamil</strong> - Native or Bilingual</p>
-       <p class="lang-item"><strong>English</strong> - Professional Working</p>
-      </div>
-     </section>
-    </div>
-    <div id="page-skills" class="page-content" style="display: none;">
-     <h1 class="mb-8 font-bold text-center page-title">Skills &amp; Certifications</h1>
-     <section class="mb-10 section-card rounded-lg p-6" style="border-left: 4px solid #6b7280;">
-      <h2 id="skills-title" class="mb-4 font-bold">Top Skills</h2>
-      <div id="skills-container" class="flex flex-wrap gap-3"><span class="skill-badge px-4 py-2 rounded-full font-medium">Python</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">C++</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">C</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">MySQL</span> <span class="skill-badge px-4 py-2 rounded-full font-medium">Artificial Intelligence (AI)</span>
-      </div>
-     </section>
-     <section class="mb-10 section-card rounded-lg p-6" style="border-left: 4px solid #6b7280;">
-      <h2 id="certifications-title" class="mb-4 font-bold">Certifications</h2>
-      <ul id="certifications-list" class="space-y-2">
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Meritorious Scholarship Certificate - Karpagam College of Engineering</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>SRISHTI-VIDYUT'25 Innovation Hackathon - Karpagam College of Engineering</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Certificate for the Completion of C Training - Spoken Tutorial, EduPyramids, SINE, IIT Bombay</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>C Programming Basics - Simplilearn</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Introduction to Generative AI Studio - Simplilearn (Powered by "Google Cloud")</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Student Learning Assessment - AICTE</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Canva Design School - Canva</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Artificial Intelligence - HP LIFE</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>HTML, CSS, JavaScript - LetsUpgrade</span></li>
-       <li class="cert-item flex items-start gap-2"><span>✓</span> <span>Power BI, AWS - Simplilearn</span></li>
-      </ul>
-     </section>
-     <section class="section-card rounded-lg p-6" style="border-left: 4px solid #6b7280;">
-      <h2 id="coding_profiles_title" class="mb-4 font-bold">Coding Profiles</h2>
-      <div id="coding-profiles-container" class="grid grid-cols-2 gap-4 md:grid-cols-2">
-       <div class="contact-item flex items-center justify-center gap-2">
-        <span style="font-size: 20px;">⚡</span><a id="coding-profile-leetcode-link" href="https://leetcode.com/u/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">LeetCode</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <span style="font-size: 20px;">🧠</span><a id="coding-profile-geeksforgeeks-link" href="https://geeksforgeeks.org/profile/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">GeeksforGeeks</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <span style="font-size: 20px;">🎯</span><a id="coding-profile-hackerrank-link" href="https://hackerrank.com/profile/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">HackerRank</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <span style="font-size: 20px;">👨‍🍳</span><a id="coding-profile-codechef-link" href="https://codechef.com/users/gssriram" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">CodeChef</a>
-       </div>
-      </div>
-     </section>
-    </div>
-    <div id="page-contact" class="page-content" style="display: none;">
-     <h1 class="mb-8 font-bold text-center page-title">Contact Information</h1>
-     <section class="section-card rounded-lg p-6 text-center" style="border-left: 4px solid #6b7280;">
-      <div class="space-y-3">
-       <div id="contact-address-item" class="contact-item flex items-center justify-center gap-2" style="text-decoration: none; cursor: pointer;">
-        <span>📍</span> <span id="contact-address-text">Dharmapuri, Tamil Nadu, India</span>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <span class="text-xl flex-shrink-0">📱</span> <a id="contact-mobile" href="tel:+916383279050" style="text-decoration: none;">+91 63832 79050</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#EA4335" style="margin-top: 2px;">
-         <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
-        </svg><a id="contact-email" href="mailto:gssriramofficial@gmail.com" style="text-decoration: none;">gssriramofficial@gmail.com</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#0A66C2" style="margin-top: 2px;">
-         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-        </svg><a id="contact-linkedin" href="https://linkedin.com/in/gssriramofficial" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">linkedin.com/in/gssriramofficial</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="currentColor" style="margin-top: 2px;">
-         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-        </svg><a id="contact-github" href="https://github.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">github.com/gssriram9050</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#1877F2" style="margin-top: 2px;">
-         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-        </svg><a id="contact-facebook" href="https://facebook.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">facebook.com/gssriram9050</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="#E4405F" style="margin-top: 2px;">
-         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-        </svg><a id="contact-instagram" href="https://instagram.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">instagram.com/gssriram9050</a>
-       </div>
-       <div class="contact-item flex items-center justify-center gap-2">
-        <svg class="flex-shrink-0" width="20" height="20" viewbox="0 0 24 24" fill="currentColor" style="margin-top: 2px;">
-         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg><a id="contact-x" href="https://x.com/gssriram9050" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">x.com/gssriram9050</a>
-       </div>
-      </div>
-     </section>
-     <section class="section-card rounded-lg p-6 mt-6" style="border-left: 4px solid #6b7280;">
-      <h2 id="message-form-title" class="mb-6 font-bold" style="font-size: 1.5rem;">Send Me a Message</h2>
-      <form id="contact-form" class="space-y-5" onsubmit="handleContactFormSubmit(event)">
-       <div><label for="form-name" class="block mb-2 font-medium text-sm">Full Name <span style="color: #ef4444;">*</span></label> <input type="text" id="form-name" name="name" required class="w-full px-4 py-2 rounded-lg border transition-all duration-200" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="Your full name">
-        <div id="form-name-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
-       </div>
-       <div><label for="form-email" class="block mb-2 font-medium text-sm">Email Address <span style="color: #ef4444;">*</span></label> <input type="email" id="form-email" name="email" required class="w-full px-4 py-2 rounded-lg border transition-all duration-200" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="your@email.com">
-        <div id="form-email-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
-       </div>
-       <div><label for="form-subject" class="block mb-2 font-medium text-sm">Subject <span style="color: #ef4444;">*</span></label> <input type="text" id="form-subject" name="subject" required class="w-full px-4 py-2 rounded-lg border transition-all duration-200" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="What is this about?">
-        <div id="form-subject-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
-       </div>
-       <div><label for="form-message" class="block mb-2 font-medium text-sm">Message <span style="color: #ef4444;">*</span></label> <textarea id="form-message" name="message" required rows="5" class="w-full px-4 py-2 rounded-lg border transition-all duration-200 resize-none" style="border-color: #6b7280; background-color: rgba(107, 114, 128, 0.1); color: #e5e5e5;" placeholder="Your message here..."></textarea>
-        <div id="form-message-error" class="text-sm mt-1" style="color: #ef4444; display: none;"></div>
-       </div><button type="submit" id="form-submit-btn" class="w-full px-6 py-3 rounded-lg font-medium transition-all duration-300" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; cursor: pointer;">Send Message</button>
-       <div id="form-status" style="display: none; padding: 14px; border-radius: 8px; margin-top: 12px; border-left: 4px solid;"></div>
-      </form>
-     </section>
-    </div>
-   </div>
   </main>
-  <footer id="footer" class="w-full border-t" style="position: relative; z-index: 50;">
-   <div class="max-w-4xl mx-auto px-6 py-6">
-    <div class="text-center" style="font-size: 0.875rem;">
-     <p id="footer-text" style="margin: 0;">© Sriram G S • 2026 • All Rights Reserved</p>
+
+  <footer id="footer" class="w-full border-t" style="position:relative;z-index:50;background-color:#1a1a1a;border-color:rgba(107,114,128,0.25);">
+    <div class="max-w-4xl mx-auto px-6 py-6">
+      <div class="text-center">
+        <p id="footer-text" style="margin:0;font-size:0.8125rem;color:#6b7280;">&#169; Sriram G S &bull; 2026 &bull; All Rights Reserved</p>
+      </div>
     </div>
-   </div>
   </footer>
+
   <script>
     let currentPage = 'home';
-
-    function navigateToPage(pageName) {
-      const pages = document.querySelectorAll('.page-content');
-      pages.forEach(page => {
-        page.style.display = 'none';
-      });
-
-      const selectedPage = document.getElementById(`page-${pageName}`);
-      if (selectedPage) {
-        selectedPage.style.display = 'block';
-        currentPage = pageName;
-      }
-
-      updateNavButtons();
-      document.querySelector('main').scrollTop = 0;
-    }
-
-    function updateNavButtons() {
-      const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
-      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
-      const textColor = config.text_color || defaultConfig.text_color;
-
-      const navButtons = document.querySelectorAll('.nav-btn');
-      navButtons.forEach(btn => {
-        const btnPage = btn.getAttribute('data-page');
-        const isActive = btnPage === currentPage;
-        
-        btn.classList.toggle('active', isActive);
-        btn.style.color = isActive ? '#ffffff' : textColor;
-        btn.style.backgroundColor = isActive ? primaryColor : 'transparent';
-      });
-    }
 
     const defaultConfig = {
       background_color: "#0a0a0a",
@@ -472,7 +462,7 @@
       font_family: "system-ui",
       font_size: 16,
       hero_name: "Sriram G S",
-      hero_tagline: "Intern @ Infosys Springboard | IT Student @ KCE | 1350+ Problems Solved | 100+ Active Coding Days | LeetCode 1650+ | CodeChef 2★ (1460+) | CodeForces 1130+",
+      hero_tagline: "Intern @ Infosys Springboard | IT Student @ KCE | 1350+ Problems Solved | 100+ Active Coding Days | LeetCode 1650+ | CodeChef 2\u2605 (1460+) | CodeForces 1130+",
       hero_location: "Coimbatore, Tamil Nadu, India",
       about_title: "Summary",
       about_description: "As someone who pursued Computer Science as my major in higher secondary, I built a strong foundation in C++, Python, and MySQL while earning consecutive centums in Computer Science. This deepened my passion for technology and inspired me to pursue engineering. Due to my dedication and academic performance, I was awarded a merit scholarship from Karpagam College of Engineering, where I am currently pursuing a B.Tech in Information Technology.\n\nDuring my first semester, I strengthened my programming fundamentals through C. In my second semester, I expanded my knowledge into Data Structures and Algorithms, along with HTML, CSS, and JavaScript. As I enter my third semester, I am excited to continue learning and exploring technologies such as Java.\n\nAlongside academics, I have been consistently focused on competitive programming and placement preparation. I have solved 1350+ problems across platforms including LeetCode, CodeChef, Codeforces, GeeksforGeeks, HackerRank, HackerEarth, and Coding Ninjas, helping me strengthen my analytical thinking and problem-solving abilities.\n\nI am currently an Intern at Infosys Springboard, where I continue to gain practical exposure while exploring certifications, training opportunities, and industry-relevant skills. I enjoy learning, building projects, sharing my journey, and continuously improving as a developer and technology professional.",
@@ -502,603 +492,409 @@
       contact_github: "gssriram9050"
     };
 
-    async function onConfigChange(config) {
-      const baseFontSize = config.font_size || defaultConfig.font_size;
-      const customFont = config.font_family || defaultConfig.font_family;
-      const fontStack = `${customFont}, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`;
-      
-      const backgroundColor = config.background_color || defaultConfig.background_color;
-      const surfaceColor = config.surface_color || defaultConfig.surface_color;
-      const textColor = config.text_color || defaultConfig.text_color;
-      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
-      const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+    function navigateToPage(pageName) {
+      document.querySelectorAll('.page-content').forEach(p => p.style.display = 'none');
+      const page = document.getElementById('page-' + pageName);
+      if (page) { page.style.display = 'block'; currentPage = pageName; }
+      updateNavButtons();
+      document.querySelector('main').scrollTop = 0;
+    }
 
-      document.body.style.backgroundColor = backgroundColor;
-      document.querySelector('main').style.backgroundColor = backgroundColor;
-      document.querySelector('main').style.color = textColor;
-      document.querySelector('main').style.fontFamily = fontStack;
-      document.querySelector('main').style.fontSize = `${baseFontSize}px`;
+    function updateNavButtons() {
+      const cfg = (window.elementSdk && window.elementSdk.config) ? window.elementSdk.config : defaultConfig;
+      const primary = cfg.primary_action_color || defaultConfig.primary_action_color;
+      const text = cfg.text_color || defaultConfig.text_color;
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        const active = btn.getAttribute('data-page') === currentPage;
+        btn.classList.toggle('active', active);
+        btn.style.color = active ? '#ffffff' : text;
+        btn.style.backgroundColor = active ? primary : 'transparent';
+      });
+    }
+
+    function formatEducation(text, baseFontSize, textColor, secondaryColor) {
+      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+      if (!lines.length) return text;
+      return lines.map((line, i) => {
+        if (i === 0) return `<strong style="color:${textColor};font-size:${baseFontSize}px;">${line}</strong><br>`;
+        if (i === lines.length - 1) return `<span style="color:${secondaryColor};font-size:${baseFontSize * 0.875}px;">${line}</span>`;
+        return `<span style="color:${textColor};font-size:${baseFontSize}px;opacity:0.9;">${line}</span><br>`;
+      }).join('');
+    }
+
+    function attachContactItemClickHandler(el, href) {
+      if (!href) return;
+      el.onclick = e => { e.preventDefault(); window.open(href, '_blank'); };
+    }
+
+    async function onConfigChange(config) {
+      const fs = config.font_size || defaultConfig.font_size;
+      const ff = config.font_family || defaultConfig.font_family;
+      const fontStack = `${ff}, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`;
+      const bg = config.background_color || defaultConfig.background_color;
+      const surface = config.surface_color || defaultConfig.surface_color;
+      const text = config.text_color || defaultConfig.text_color;
+      const primary = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondary = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      document.body.style.backgroundColor = bg;
+      const mainEl = document.querySelector('main');
+      mainEl.style.backgroundColor = bg;
+      mainEl.style.color = text;
+      mainEl.style.fontFamily = fontStack;
+      mainEl.style.fontSize = fs + 'px';
 
       const navbar = document.getElementById('navbar');
-      navbar.style.backgroundColor = surfaceColor;
-      navbar.style.borderColor = `${secondaryColor}40`;
+      navbar.style.backgroundColor = surface;
+      navbar.style.borderColor = secondary + '40';
 
-      const navButtons = document.querySelectorAll('.nav-btn');
-      navButtons.forEach(btn => {
-        const btnPage = btn.getAttribute('data-page');
-        const isActive = btnPage === currentPage;
-        
-        btn.classList.toggle('active', isActive);
-        btn.style.color = isActive ? '#ffffff' : textColor;
-        btn.style.backgroundColor = isActive ? primaryColor : 'transparent';
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        const active = btn.getAttribute('data-page') === currentPage;
+        btn.classList.toggle('active', active);
+        btn.style.color = active ? '#ffffff' : text;
+        btn.style.backgroundColor = active ? primary : 'transparent';
         btn.style.fontFamily = fontStack;
-        btn.style.fontSize = `${baseFontSize}px`;
+        btn.style.fontSize = fs + 'px';
       });
 
-      const sectionCards = document.querySelectorAll('.section-card');
-      sectionCards.forEach(card => {
-        card.style.backgroundColor = surfaceColor;
-        card.style.border = `1px solid ${secondaryColor}20`;
+      document.querySelectorAll('.section-card').forEach(card => {
+        card.style.backgroundColor = surface;
       });
 
-      const pageTitles = document.querySelectorAll('.page-title');
-      pageTitles.forEach(title => {
-        title.style.fontSize = `${baseFontSize * 2}px`;
-        title.style.color = textColor;
+      document.querySelectorAll('.page-title').forEach(t => {
+        t.style.fontSize = (fs * 2) + 'px';
+        t.style.color = text;
       });
 
+      // Hero
       const heroName = document.getElementById('hero-name');
       if (heroName) {
         heroName.textContent = config.hero_name || defaultConfig.hero_name;
-        heroName.style.fontSize = `${baseFontSize * 2.5}px`;
-        heroName.style.color = textColor;
+        heroName.style.fontSize = (fs * 2.5) + 'px';
+        heroName.style.color = text;
       }
 
       const heroTagline = document.getElementById('hero-tagline');
       if (heroTagline) {
         heroTagline.textContent = config.hero_tagline || defaultConfig.hero_tagline;
-        heroTagline.style.fontSize = `${baseFontSize * 1.125}px`;
-        heroTagline.style.color = secondaryColor;
+        heroTagline.style.fontSize = (fs * 1.125) + 'px';
+        heroTagline.style.color = secondary;
       }
 
       const heroLocationItem = document.getElementById('hero-location-item');
       if (heroLocationItem) {
-        const locationText = config.hero_location || defaultConfig.hero_location;
-        document.getElementById('hero-location-text').textContent = locationText;
-        heroLocationItem.onclick = () => window.open(`https://maps.google.com/?q=${encodeURIComponent(locationText)}`, '_blank');
-        heroLocationItem.style.fontSize = `${baseFontSize}px`;
-        heroLocationItem.style.color = primaryColor;
+        const loc = config.hero_location || defaultConfig.hero_location;
+        document.getElementById('hero-location-text').textContent = loc;
+        heroLocationItem.onclick = () => window.open('https://maps.google.com/?q=' + encodeURIComponent(loc), '_blank');
+        heroLocationItem.style.color = primary;
+        heroLocationItem.style.fontSize = fs + 'px';
       }
 
+      // About
       const aboutTitle = document.getElementById('about-title');
       if (aboutTitle) {
         aboutTitle.textContent = config.about_title || defaultConfig.about_title;
-        aboutTitle.style.fontSize = `${baseFontSize * 1.5}px`;
-        aboutTitle.style.color = textColor;
+        aboutTitle.style.fontSize = (fs * 1.5) + 'px';
+        aboutTitle.style.color = text;
+      }
+      const aboutDesc = document.getElementById('about-description');
+      if (aboutDesc) {
+        aboutDesc.textContent = config.about_description || defaultConfig.about_description;
+        aboutDesc.style.fontSize = fs + 'px';
+        aboutDesc.style.color = text;
       }
 
-      const aboutDescription = document.getElementById('about-description');
-      if (aboutDescription) {
-        aboutDescription.textContent = config.about_description || defaultConfig.about_description;
-        aboutDescription.style.fontSize = `${baseFontSize}px`;
-        aboutDescription.style.color = textColor;
-      }
-
+      // Skills
       const skillsTitle = document.getElementById('skills-title');
-      if (skillsTitle) {
-        skillsTitle.textContent = config.skills_title || defaultConfig.skills_title;
-        skillsTitle.style.fontSize = `${baseFontSize * 1.5}px`;
-        skillsTitle.style.color = textColor;
-      }
-
+      if (skillsTitle) { skillsTitle.style.color = text; skillsTitle.style.fontSize = (fs * 1.5) + 'px'; }
       const skillsList = config.skills_list || defaultConfig.skills_list;
-      const skillsArray = skillsList.split(',').map(s => s.trim());
       const skillsContainer = document.getElementById('skills-container');
       if (skillsContainer) {
         skillsContainer.innerHTML = '';
-        skillsArray.forEach((skill) => {
+        skillsList.split(',').map(s => s.trim()).forEach(skill => {
           const badge = document.createElement('span');
           badge.className = 'skill-badge px-4 py-2 rounded-full font-medium';
           badge.textContent = skill;
-          badge.style.backgroundColor = `${primaryColor}20`;
-          badge.style.color = primaryColor;
-          badge.style.fontSize = `${baseFontSize * 0.875}px`;
-          badge.style.border = `1px solid ${primaryColor}40`;
+          badge.style.backgroundColor = primary + '20';
+          badge.style.color = primary;
+          badge.style.fontSize = (fs * 0.875) + 'px';
+          badge.style.border = '1px solid ' + primary + '40';
           skillsContainer.appendChild(badge);
         });
       }
 
-      const education1 = document.getElementById('education-1');
-      if (education1) {
-        education1.innerHTML = formatEducation(config.education_1 || defaultConfig.education_1, baseFontSize, textColor, secondaryColor);
-      }
+      // Education
+      ['1','2','3'].forEach(n => {
+        const el = document.getElementById('education-' + n);
+        if (el) el.innerHTML = formatEducation(config['education_' + n] || defaultConfig['education_' + n], fs, text, secondary);
+      });
 
-      const education2 = document.getElementById('education-2');
-      if (education2) {
-        education2.innerHTML = formatEducation(config.education_2 || defaultConfig.education_2, baseFontSize, textColor, secondaryColor);
-      }
-
-      const education3 = document.getElementById('education-3');
-      if (education3) {
-        education3.innerHTML = formatEducation(config.education_3 || defaultConfig.education_3, baseFontSize, textColor, secondaryColor);
-      }
-
-      const certificationsTitle = document.getElementById('certifications-title');
-      if (certificationsTitle) {
-        certificationsTitle.textContent = config.certifications_title || defaultConfig.certifications_title;
-        certificationsTitle.style.fontSize = `${baseFontSize * 1.5}px`;
-        certificationsTitle.style.color = textColor;
-      }
-
-      const certificationsList = config.certifications_list || defaultConfig.certifications_list;
-      const certificationsArray = certificationsList.split('|').map(s => s.trim());
-      const certificationsContainer = document.getElementById('certifications-list');
-      if (certificationsContainer) {
-        certificationsContainer.innerHTML = '';
-        certificationsArray.forEach((cert) => {
+      // Certifications
+      const certsTitle = document.getElementById('certifications-title');
+      if (certsTitle) { certsTitle.style.color = text; certsTitle.style.fontSize = (fs * 1.5) + 'px'; }
+      const certsList = config.certifications_list || defaultConfig.certifications_list;
+      const certsContainer = document.getElementById('certifications-list');
+      if (certsContainer) {
+        certsContainer.innerHTML = '';
+        certsList.split('|').map(s => s.trim()).forEach(cert => {
           const li = document.createElement('li');
           li.className = 'cert-item flex items-start gap-2';
-          li.innerHTML = `<span style="color: ${primaryColor}; font-weight: bold;">✓</span><span>${cert}</span>`;
-          li.style.fontSize = `${baseFontSize}px`;
-          li.style.color = textColor;
-          certificationsContainer.appendChild(li);
+          li.innerHTML = `<span style="color:${primary};font-weight:bold;">&#10003;</span><span>${cert}</span>`;
+          li.style.fontSize = fs + 'px';
+          li.style.color = text;
+          certsContainer.appendChild(li);
         });
       }
 
-      const languagesTitle = document.getElementById('languages-title');
-      if (languagesTitle) {
-        languagesTitle.textContent = config.languages_title || defaultConfig.languages_title;
-        languagesTitle.style.fontSize = `${baseFontSize * 1.5}px`;
-        languagesTitle.style.color = textColor;
-      }
-
-      const languagesList = config.languages_list || defaultConfig.languages_list;
-      const languagesArray = languagesList.split(',').map(s => s.trim());
-      const languagesContainer = document.getElementById('languages-container');
-      if (languagesContainer) {
-        languagesContainer.innerHTML = '';
-        languagesArray.forEach(lang => {
+      // Languages
+      const langTitle = document.getElementById('languages-title');
+      if (langTitle) { langTitle.style.color = text; langTitle.style.fontSize = (fs * 1.5) + 'px'; }
+      const langList = config.languages_list || defaultConfig.languages_list;
+      const langContainer = document.getElementById('languages-container');
+      if (langContainer) {
+        langContainer.innerHTML = '';
+        langList.split(',').map(s => s.trim()).forEach(lang => {
           const p = document.createElement('p');
           p.className = 'lang-item';
           const parts = lang.split('-').map(s => s.trim());
-          p.innerHTML = `<strong>${parts[0]}</strong>${parts[1] ? ' - ' + parts[1] : ''}`;
-          p.style.fontSize = `${baseFontSize}px`;
-          p.style.color = textColor;
-          languagesContainer.appendChild(p);
+          // Handle parenthesis-based format like "Tamil (Native or Bilingual)"
+          const parenMatch = lang.match(/^(.+?)\s*\((.+)\)$/);
+          if (parenMatch) {
+            p.innerHTML = `<strong>${parenMatch[1].trim()}</strong> - ${parenMatch[2].trim()}`;
+          } else if (parts.length >= 2) {
+            p.innerHTML = `<strong>${parts[0]}</strong> - ${parts.slice(1).join('-').trim()}`;
+          } else {
+            p.innerHTML = `<strong>${lang}</strong>`;
+          }
+          p.style.fontSize = fs + 'px';
+          p.style.color = text;
+          langContainer.appendChild(p);
         });
       }
 
-      const codingProfilesTitle = document.getElementById('coding_profiles_title');
-      if (codingProfilesTitle) {
-        codingProfilesTitle.textContent = config.coding_profiles_title || defaultConfig.coding_profiles_title;
-        codingProfilesTitle.style.fontSize = `${baseFontSize * 1.5}px`;
-        codingProfilesTitle.style.color = textColor;
+      // Coding Profiles title
+      const cpTitle = document.getElementById('coding_profiles_title');
+      if (cpTitle) { cpTitle.style.color = text; cpTitle.style.fontSize = (fs * 1.5) + 'px'; }
+
+      // Coding profile links
+      const lcLink = document.getElementById('coding-profile-leetcode-link');
+      if (lcLink) {
+        const u = config.coding_profile_leetcode || defaultConfig.coding_profile_leetcode;
+        lcLink.href = 'https://leetcode.com/u/' + u;
+        lcLink.style.color = primary; lcLink.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(lcLink.closest('.contact-item'), lcLink.href);
+      }
+      const ggLink = document.getElementById('coding-profile-geeksforgeeks-link');
+      if (ggLink) {
+        const u = config.coding_profile_geeksforgeeks || defaultConfig.coding_profile_geeksforgeeks;
+        ggLink.href = 'https://geeksforgeeks.org/profile/' + u;
+        ggLink.style.color = primary; ggLink.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(ggLink.closest('.contact-item'), ggLink.href);
+      }
+      const hrLink = document.getElementById('coding-profile-hackerrank-link');
+      if (hrLink) {
+        const u = config.coding_profile_hackerrank || defaultConfig.coding_profile_hackerrank;
+        hrLink.href = 'https://hackerrank.com/profile/' + u;
+        hrLink.style.color = primary; hrLink.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(hrLink.closest('.contact-item'), hrLink.href);
+      }
+      const ccLink = document.getElementById('coding-profile-codechef-link');
+      if (ccLink) {
+        const u = config.coding_profile_codechef || defaultConfig.coding_profile_codechef;
+        ccLink.href = 'https://codechef.com/users/' + u;
+        ccLink.style.color = primary; ccLink.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(ccLink.closest('.contact-item'), ccLink.href);
       }
 
-      const leetcodeLink = document.getElementById('coding-profile-leetcode-link');
-      if (leetcodeLink) {
-        const leetcodeUsername = config.coding_profile_leetcode || defaultConfig.coding_profile_leetcode;
-        leetcodeLink.href = `https://leetcode.com/u/${leetcodeUsername}`;
-        leetcodeLink.style.fontSize = `${baseFontSize}px`;
-        leetcodeLink.style.color = primaryColor;
-        const leetcodeItem = leetcodeLink.closest('.contact-item');
-        if (leetcodeItem) {
-          attachContactItemClickHandler(leetcodeItem, leetcodeLink.href);
-        }
+      // Contact section
+      const addrItem = document.getElementById('contact-address-item');
+      if (addrItem) {
+        const addr = config.contact_address || defaultConfig.contact_address;
+        document.getElementById('contact-address-text').textContent = addr;
+        addrItem.onclick = () => window.open('https://maps.google.com/?q=' + encodeURIComponent(addr), '_blank');
+        addrItem.style.color = primary; addrItem.style.fontSize = fs + 'px';
+      }
+      const cMobile = document.getElementById('contact-mobile');
+      if (cMobile) {
+        const m = config.contact_mobile || defaultConfig.contact_mobile;
+        cMobile.textContent = m;
+        cMobile.href = 'tel:' + m.replace(/\s/g,'');
+        cMobile.style.color = primary; cMobile.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(cMobile.closest('.contact-item'), cMobile.href);
+      }
+      const cEmail = document.getElementById('contact-email');
+      if (cEmail) {
+        const e = config.contact_email || defaultConfig.contact_email;
+        cEmail.textContent = e;
+        cEmail.href = 'mailto:' + e;
+        cEmail.style.color = primary; cEmail.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(cEmail.closest('.contact-item'), cEmail.href);
+      }
+      const cLinkedin = document.getElementById('contact-linkedin');
+      if (cLinkedin) {
+        const u = config.contact_linkedin || defaultConfig.contact_linkedin;
+        cLinkedin.textContent = 'linkedin.com/in/' + u;
+        cLinkedin.href = 'https://linkedin.com/in/' + u;
+        cLinkedin.style.color = primary; cLinkedin.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(cLinkedin.closest('.contact-item'), cLinkedin.href);
+      }
+      const cGithub = document.getElementById('contact-github');
+      if (cGithub) {
+        const u = config.contact_github || defaultConfig.contact_github;
+        cGithub.textContent = 'github.com/' + u;
+        cGithub.href = 'https://github.com/' + u;
+        cGithub.style.color = primary; cGithub.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(cGithub.closest('.contact-item'), cGithub.href);
+      }
+      const cFacebook = document.getElementById('contact-facebook');
+      if (cFacebook) {
+        const url = config.contact_facebook || defaultConfig.contact_facebook;
+        cFacebook.textContent = 'facebook.com/gssriram9050';
+        cFacebook.href = url;
+        cFacebook.style.color = primary; cFacebook.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(cFacebook.closest('.contact-item'), url);
+      }
+      const cInstagram = document.getElementById('contact-instagram');
+      if (cInstagram) {
+        const u = config.contact_instagram || defaultConfig.contact_instagram;
+        cInstagram.textContent = 'instagram.com/' + u;
+        cInstagram.href = 'https://instagram.com/' + u;
+        cInstagram.style.color = primary; cInstagram.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(cInstagram.closest('.contact-item'), cInstagram.href);
+      }
+      const cX = document.getElementById('contact-x');
+      if (cX) {
+        const u = config.contact_x || defaultConfig.contact_x;
+        cX.textContent = 'x.com/' + u;
+        cX.href = 'https://x.com/' + u;
+        cX.style.color = primary; cX.style.fontSize = fs + 'px';
+        attachContactItemClickHandler(cX.closest('.contact-item'), cX.href);
       }
 
-      const geeksLink = document.getElementById('coding-profile-geeksforgeeks-link');
-      if (geeksLink) {
-        const geeksUsername = config.coding_profile_geeksforgeeks || defaultConfig.coding_profile_geeksforgeeks;
-        geeksLink.href = `https://geeksforgeeks.org/profile/${geeksUsername}`;
-        geeksLink.style.fontSize = `${baseFontSize}px`;
-        geeksLink.style.color = primaryColor;
-        const geeksItem = geeksLink.closest('.contact-item');
-        if (geeksItem) {
-          attachContactItemClickHandler(geeksItem, geeksLink.href);
-        }
-      }
-
-      const hackerrankLink = document.getElementById('coding-profile-hackerrank-link');
-      if (hackerrankLink) {
-        const hackerrankUsername = config.coding_profile_hackerrank || defaultConfig.coding_profile_hackerrank;
-        hackerrankLink.href = `https://hackerrank.com/profile/${hackerrankUsername}`;
-        hackerrankLink.style.fontSize = `${baseFontSize}px`;
-        hackerrankLink.style.color = primaryColor;
-        const hackerrankItem = hackerrankLink.closest('.contact-item');
-        if (hackerrankItem) {
-          attachContactItemClickHandler(hackerrankItem, hackerrankLink.href);
-        }
-      }
-
-      const codechefLink = document.getElementById('coding-profile-codechef-link');
-      if (codechefLink) {
-        const codechefUsername = config.coding_profile_codechef || defaultConfig.coding_profile_codechef;
-        codechefLink.href = `https://codechef.com/users/${codechefUsername}`;
-        codechefLink.style.fontSize = `${baseFontSize}px`;
-        codechefLink.style.color = primaryColor;
-        const codechefItem = codechefLink.closest('.contact-item');
-        if (codechefItem) {
-          attachContactItemClickHandler(codechefItem, codechefLink.href);
-        }
-      }
-
-      const contactAddress = document.getElementById('contact-address-item');
-      if (contactAddress) {
-        const addressText = config.contact_address || defaultConfig.contact_address;
-        document.getElementById('contact-address-text').textContent = addressText;
-        contactAddress.onclick = () => window.open(`https://maps.google.com/?q=${encodeURIComponent(addressText)}`, '_blank');
-        contactAddress.style.fontSize = `${baseFontSize}px`;
-        contactAddress.style.color = primaryColor;
-      }
-
-      const contactMobile = document.getElementById('contact-mobile');
-      if (contactMobile) {
-        const mobileValue = config.contact_mobile || defaultConfig.contact_mobile;
-        contactMobile.textContent = mobileValue;
-        contactMobile.href = `tel:${mobileValue.replace(/\s/g, '')}`;
-        contactMobile.style.fontSize = `${baseFontSize}px`;
-        contactMobile.style.color = primaryColor;
-        const contactMobileItem = contactMobile.closest('.contact-item');
-        if (contactMobileItem) {
-          attachContactItemClickHandler(contactMobileItem, contactMobile.href);
-        }
-      }
-
-      const contactEmail = document.getElementById('contact-email');
-      if (contactEmail) {
-        const emailValue = config.contact_email || defaultConfig.contact_email;
-        contactEmail.textContent = emailValue;
-        contactEmail.href = `mailto:${emailValue}`;
-        contactEmail.style.fontSize = `${baseFontSize}px`;
-        contactEmail.style.color = primaryColor;
-        const contactEmailItem = contactEmail.closest('.contact-item');
-        if (contactEmailItem) {
-          attachContactItemClickHandler(contactEmailItem, contactEmail.href);
-        }
-      }
-
-      const contactLinkedin = document.getElementById('contact-linkedin');
-      if (contactLinkedin) {
-        const linkedinUsername = config.contact_linkedin || defaultConfig.contact_linkedin;
-        contactLinkedin.textContent = `linkedin.com/in/${linkedinUsername}`;
-        contactLinkedin.href = `https://linkedin.com/in/${linkedinUsername}`;
-        contactLinkedin.style.fontSize = `${baseFontSize}px`;
-        contactLinkedin.style.color = primaryColor;
-        const contactLinkedinItem = contactLinkedin.closest('.contact-item');
-        if (contactLinkedinItem) {
-          attachContactItemClickHandler(contactLinkedinItem, contactLinkedin.href);
-        }
-      }
-
-      const contactInstagram = document.getElementById('contact-instagram');
-      if (contactInstagram) {
-        const instagramUsername = config.contact_instagram || defaultConfig.contact_instagram;
-        contactInstagram.textContent = `instagram.com/${instagramUsername}`;
-        contactInstagram.href = `https://instagram.com/${instagramUsername}`;
-        contactInstagram.style.fontSize = `${baseFontSize}px`;
-        contactInstagram.style.color = primaryColor;
-        const contactInstagramItem = contactInstagram.closest('.contact-item');
-        if (contactInstagramItem) {
-          attachContactItemClickHandler(contactInstagramItem, contactInstagram.href);
-        }
-      }
-
-      const contactX = document.getElementById('contact-x');
-      if (contactX) {
-        const xUsername = config.contact_x || defaultConfig.contact_x;
-        contactX.textContent = `x.com/${xUsername}`;
-        contactX.href = `https://x.com/${xUsername}`;
-        contactX.style.fontSize = `${baseFontSize}px`;
-        contactX.style.color = primaryColor;
-        const contactXItem = contactX.closest('.contact-item');
-        if (contactXItem) {
-          attachContactItemClickHandler(contactXItem, contactX.href);
-        }
-      }
-
-      const contactFacebook = document.getElementById('contact-facebook');
-      if (contactFacebook) {
-        const facebookUrl = config.contact_facebook || defaultConfig.contact_facebook;
-        contactFacebook.textContent = 'facebook.com/gssriram9050';
-        contactFacebook.href = facebookUrl;
-        contactFacebook.style.fontSize = `${baseFontSize}px`;
-        contactFacebook.style.color = primaryColor;
-        const contactFacebookItem = contactFacebook.closest('.contact-item');
-        if (contactFacebookItem) {
-          attachContactItemClickHandler(contactFacebookItem, facebookUrl);
-        }
-      }
-
-      const contactGithub = document.getElementById('contact-github');
-      if (contactGithub) {
-        const githubUsername = config.contact_github || defaultConfig.contact_github;
-        contactGithub.textContent = `github.com/${githubUsername}`;
-        contactGithub.href = `https://github.com/${githubUsername}`;
-        contactGithub.style.fontSize = `${baseFontSize}px`;
-        contactGithub.style.color = primaryColor;
-        const contactGithubItem = contactGithub.closest('.contact-item');
-        if (contactGithubItem) {
-          attachContactItemClickHandler(contactGithubItem, contactGithub.href);
-        }
-      }
-      
-      const resumeButton = document.getElementById('resume-button');
-      if (resumeButton) {
-        resumeButton.style.background = `linear-gradient(135deg, ${primaryColor} 0%, #2563eb 100%)`;
-        resumeButton.style.fontSize = `${baseFontSize * 0.875}px`;
-        resumeButton.style.fontFamily = fontStack;
+      const resumeBtn = document.getElementById('resume-button');
+      if (resumeBtn) {
+        resumeBtn.style.background = `linear-gradient(135deg, ${primary} 0%, #2563eb 100%)`;
+        resumeBtn.style.fontSize = (fs * 0.875) + 'px';
+        resumeBtn.style.fontFamily = fontStack;
       }
 
       const footer = document.getElementById('footer');
       if (footer) {
-        footer.style.backgroundColor = surfaceColor;
-        footer.style.borderColor = `${secondaryColor}40`;
+        footer.style.backgroundColor = surface;
+        footer.style.borderColor = secondary + '40';
       }
-
       const footerText = document.getElementById('footer-text');
       if (footerText) {
-        footerText.style.color = secondaryColor;
-        footerText.style.fontSize = `${baseFontSize * 0.8125}px`;
+        footerText.style.color = secondary;
+        footerText.style.fontSize = (fs * 0.8125) + 'px';
         footerText.style.fontFamily = fontStack;
       }
     }
 
-    function attachContactItemClickHandler(element, href) {
-      if (!href) return;
-      element.onclick = (e) => {
-        e.preventDefault();
-        window.open(href, '_blank');
-      };
-    }
-
-    function formatEducation(text, baseFontSize, textColor, secondaryColor) {
-      const lines = text.split('\n').map(line => line.trim()).filter(line => line);
-      if (lines.length === 0) return text;
-      
-      let html = '';
-      lines.forEach((line, index) => {
-        if (index === 0) {
-          html += `<strong style="color: ${textColor}; font-size: ${baseFontSize}px;">${line}</strong><br>`;
-        } else if (index === lines.length - 1) {
-          html += `<span style="color: ${secondaryColor}; font-size: ${baseFontSize * 0.875}px;">${line}</span>`;
-        } else {
-          html += `<span style="color: ${textColor}; font-size: ${baseFontSize}px; opacity: 0.9;">${line}</span><br>`;
-        }
-      });
-      
-      return html;
-    }
-
-    async function handleContactFormSubmit(event) {
-      event.preventDefault();
-      
-      const form = document.getElementById('contact-form');
-      const nameInput = document.getElementById('form-name');
-      const emailInput = document.getElementById('form-email');
-      const subjectInput = document.getElementById('form-subject');
-      const messageInput = document.getElementById('form-message');
-      const submitBtn = document.getElementById('form-submit-btn');
-      const statusDiv = document.getElementById('form-status');
-      
-      // Clear all previous errors
+    // Contact form handling
+    function handleContactFormSubmit() {
       clearAllErrors();
-      
-      // Validate all fields
-      let isValid = true;
-      
-      // Validate name
-      if (!nameInput.value.trim()) {
-        showFieldError('form-name', 'Please enter your full name');
-        isValid = false;
-      } else if (nameInput.value.trim().length < 2) {
-        showFieldError('form-name', 'Name must be at least 2 characters');
-        isValid = false;
-      }
-      
-      // Validate email
+      const name = document.getElementById('form-name').value.trim();
+      const email = document.getElementById('form-email').value.trim();
+      const subject = document.getElementById('form-subject').value.trim();
+      const message = document.getElementById('form-message').value.trim();
+      let valid = true;
+
+      if (!name || name.length < 2) { showFieldError('form-name', name ? 'Name must be at least 2 characters' : 'Please enter your full name'); valid = false; }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailInput.value.trim()) {
-        showFieldError('form-email', 'Please enter your email address');
-        isValid = false;
-      } else if (!emailRegex.test(emailInput.value.trim())) {
-        showFieldError('form-email', 'Please enter a valid email address (e.g., name@example.com)');
-        isValid = false;
-      }
-      
-      // Validate subject
-      if (!subjectInput.value.trim()) {
-        showFieldError('form-subject', 'Please enter a subject line');
-        isValid = false;
-      }
-      
-      // Validate message
-      if (!messageInput.value.trim()) {
-        showFieldError('form-message', 'Please enter your message');
-        isValid = false;
-      }
-      
-      if (!isValid) {
-        return;
-      }
-      
-      // Disable submit button and show loading state
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-      submitBtn.style.opacity = '0.7';
+      if (!email) { showFieldError('form-email', 'Please enter your email address'); valid = false; }
+      else if (!emailRegex.test(email)) { showFieldError('form-email', 'Please enter a valid email address (e.g., name@example.com)'); valid = false; }
+      if (!subject) { showFieldError('form-subject', 'Please enter a subject line'); valid = false; }
+      if (!message) { showFieldError('form-message', 'Please enter your message'); valid = false; }
+      if (!valid) return;
+
+      const btn = document.getElementById('form-submit-btn');
+      const statusDiv = document.getElementById('form-status');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      btn.style.opacity = '0.7';
       statusDiv.style.display = 'none';
-      
-      // Prepare form data with portfolio context
-      const formData = {
-        name: nameInput.value.trim(),
-        email: emailInput.value.trim(),
-        subject: subjectInput.value.trim(),
-        message: messageInput.value.trim(),
-        source: 'portfolio_contact_form',
-        received_at: new Date().toISOString()
+
+      const formData = { name, email, subject, message, source: 'portfolio_contact_form', received_at: new Date().toISOString() };
+
+      const doSave = async () => {
+        if (window.dataSdk) {
+          const result = await window.dataSdk.create(formData);
+          return result.isOk;
+        }
+        // Fallback: open mailto
+        window.location.href = `mailto:gssriramofficial@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
+        return true;
       };
-      
-      // Save to Canva Sheet using Data SDK
-      const result = await window.dataSdk.create(formData);
-      
-      if (result.isOk) {
-        // Show success message with professional template
-        statusDiv.style.backgroundColor = 'rgba(34, 197, 94, 0.15)';
-        statusDiv.style.color = '#22c55e';
-        statusDiv.style.borderColor = '#22c55e';
-        statusDiv.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 20px;">✓</span>
-            <div style="text-align: left;">
-              <div style="font-weight: 600; margin-bottom: 2px;">Message Received Successfully!</div>
-              <div style="font-size: 0.875rem; opacity: 0.9;">I'll review your message and get back to you within 24-48 hours at <strong>${emailInput.value.trim()}</strong></div>
-            </div>
-          </div>
-        `;
-        statusDiv.style.display = 'block';
-        
-        // Reset form
-        form.reset();
-        clearAllErrors();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-        submitBtn.style.opacity = '1';
-        
-        // Hide success message after 6 seconds
-        setTimeout(() => {
-          statusDiv.style.display = 'none';
-        }, 6000);
-      } else {
-        // Show error message
-        statusDiv.style.backgroundColor = 'rgba(239, 68, 68, 0.15)';
-        statusDiv.style.color = '#ef4444';
-        statusDiv.style.borderColor = '#ef4444';
-        statusDiv.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 20px;">✕</span>
-            <div style="text-align: left;">
-              <div style="font-weight: 600; margin-bottom: 2px;">Unable to Send Message</div>
-              <div style="font-size: 0.875rem; opacity: 0.9;">Please try again or contact me directly via email</div>
-            </div>
-          </div>
-        `;
-        statusDiv.style.display = 'block';
-        
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-        submitBtn.style.opacity = '1';
-      }
-    }
-    
-    function showFieldError(fieldId, errorMessage) {
-      const field = document.getElementById(fieldId);
-      const errorDiv = document.getElementById(fieldId + '-error');
-      
-      // Highlight field with error
-      field.style.borderColor = '#ef4444';
-      field.style.backgroundColor = 'rgba(239, 68, 68, 0.08)';
-      
-      // Show error message
-      errorDiv.textContent = errorMessage;
-      errorDiv.style.display = 'block';
-      
-      // Scroll to first error field
-      field.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      
-      // Add focus and hover behavior to help user correct
-      field.addEventListener('focus', () => {
-        if (field.value.trim() === '') {
-          field.style.borderColor = '#3b82f6';
-          field.style.backgroundColor = 'rgba(59, 130, 246, 0.08)';
-        }
-      });
-      
-      field.addEventListener('blur', () => {
-        if (field.value.trim() === '') {
-          field.style.borderColor = '#ef4444';
-          field.style.backgroundColor = 'rgba(239, 68, 68, 0.08)';
+
+      doSave().then(ok => {
+        if (ok) {
+          statusDiv.style.backgroundColor = 'rgba(34,197,94,0.15)';
+          statusDiv.style.color = '#22c55e';
+          statusDiv.style.borderColor = '#22c55e';
+          statusDiv.innerHTML = `<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:20px;">&#10003;</span><div style="text-align:left;"><div style="font-weight:600;margin-bottom:2px;">Message Received Successfully!</div><div style="font-size:0.875rem;opacity:0.9;">I'll get back to you within 24–48 hours at <strong>${email}</strong></div></div></div>`;
+          statusDiv.style.display = 'block';
+          ['form-name','form-email','form-subject','form-message'].forEach(id => { document.getElementById(id).value = ''; });
+          clearAllErrors();
+          setTimeout(() => { statusDiv.style.display = 'none'; }, 6000);
         } else {
-          field.style.borderColor = '#22c55e';
-          field.style.backgroundColor = 'rgba(34, 197, 94, 0.08)';
-          errorDiv.style.display = 'none';
+          statusDiv.style.backgroundColor = 'rgba(239,68,68,0.15)';
+          statusDiv.style.color = '#ef4444';
+          statusDiv.style.borderColor = '#ef4444';
+          statusDiv.innerHTML = `<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:20px;">&#10005;</span><div style="text-align:left;"><div style="font-weight:600;margin-bottom:2px;">Unable to Send Message</div><div style="font-size:0.875rem;opacity:0.9;">Please try again or email me directly</div></div></div>`;
+          statusDiv.style.display = 'block';
         }
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        btn.style.opacity = '1';
+      }).catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        btn.style.opacity = '1';
       });
-      
-      field.addEventListener('input', () => {
-        if (field.value.trim() !== '') {
+    }
+
+    function showFieldError(fieldId, msg) {
+      const field = document.getElementById(fieldId);
+      const errDiv = document.getElementById(fieldId + '-error');
+      field.style.borderColor = '#ef4444';
+      field.style.backgroundColor = 'rgba(239,68,68,0.08)';
+      errDiv.textContent = msg;
+      errDiv.style.display = 'block';
+      field.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      field.addEventListener('input', function onInput() {
+        if (field.value.trim()) {
           field.style.borderColor = '#22c55e';
-          field.style.backgroundColor = 'rgba(34, 197, 94, 0.08)';
-          errorDiv.style.display = 'none';
+          field.style.backgroundColor = 'rgba(34,197,94,0.08)';
+          errDiv.style.display = 'none';
+          field.removeEventListener('input', onInput);
         }
       });
     }
-    
+
     function clearAllErrors() {
-      ['form-name', 'form-email', 'form-subject', 'form-message'].forEach(fieldId => {
-        const field = document.getElementById(fieldId);
-        const errorDiv = document.getElementById(fieldId + '-error');
-        
-        field.style.borderColor = '#6b7280';
-        field.style.backgroundColor = 'rgba(107, 114, 128, 0.1)';
-        errorDiv.style.display = 'none';
-        errorDiv.textContent = '';
+      ['form-name','form-email','form-subject','form-message'].forEach(id => {
+        const f = document.getElementById(id);
+        const e = document.getElementById(id + '-error');
+        f.style.borderColor = '#6b7280';
+        f.style.backgroundColor = 'rgba(107,114,128,0.1)';
+        e.style.display = 'none';
+        e.textContent = '';
       });
     }
 
     function mapToCapabilities(config) {
       return {
         recolorables: [
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => {
-              config.background_color = value;
-              window.elementSdk.setConfig({ background_color: value });
-            }
-          },
-          {
-            get: () => config.surface_color || defaultConfig.surface_color,
-            set: (value) => {
-              config.surface_color = value;
-              window.elementSdk.setConfig({ surface_color: value });
-            }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => {
-              config.text_color = value;
-              window.elementSdk.setConfig({ text_color: value });
-            }
-          },
-          {
-            get: () => config.primary_action_color || defaultConfig.primary_action_color,
-            set: (value) => {
-              config.primary_action_color = value;
-              window.elementSdk.setConfig({ primary_action_color: value });
-            }
-          },
-          {
-            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
-            set: (value) => {
-              config.secondary_action_color = value;
-              window.elementSdk.setConfig({ secondary_action_color: value });
-            }
-          }
+          { get: () => config.background_color || defaultConfig.background_color, set: v => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+          { get: () => config.surface_color || defaultConfig.surface_color, set: v => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: v => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+          { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: v => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
+          { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: v => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } }
         ],
         borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (value) => {
-            config.font_family = value;
-            window.elementSdk.setConfig({ font_family: value });
-          }
-        },
-        fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
-          set: (value) => {
-            config.font_size = value;
-            window.elementSdk.setConfig({ font_size: value });
-          }
-        }
+        fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: v => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+        fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: v => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
       };
     }
 
@@ -1136,24 +932,26 @@
       ]);
     }
 
+    // Initialize SDK if present, otherwise use defaultConfig directly
     if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
+      window.elementSdk.init({ defaultConfig, onConfigChange, mapToCapabilities, mapToEditPanelValues });
+    } else {
+      // Standalone mode: render with defaults immediately
+      onConfigChange(defaultConfig);
     }
 
     // Initialize Data SDK
     if (window.dataSdk) {
-      const dataHandler = {
-        onDataChanged(data) {
-          // Data handler - just stores the data, no UI needed for write-only form
-        }
-      };
-      window.dataSdk.init(dataHandler);
+      window.dataSdk.init({ onDataChanged(data) {} });
     }
+
+    // Set location click handler on load
+    document.getElementById('hero-location-item').onclick = () => {
+      window.open('https://maps.google.com/?q=' + encodeURIComponent(defaultConfig.hero_location), '_blank');
+    };
+    document.getElementById('contact-address-item').onclick = () => {
+      window.open('https://maps.google.com/?q=' + encodeURIComponent(defaultConfig.contact_address), '_blank');
+    };
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a097a4794c2d1699',t:'MTc4MTA4NjgxNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
