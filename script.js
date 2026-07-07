@@ -62,9 +62,9 @@ $$(".nav-menu a").forEach((link) => {
 const typingText = $("#typingText");
 const typingPhrases = [
   "Aspiring Developer",
-  "IT Student",
+  "Student",
   "Web Technology Learner",
-  "Future-Ready Problem Solver"
+  "Problem Solver"
 ];
 
 let phraseIndex = 0;
