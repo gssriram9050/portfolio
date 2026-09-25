@@ -1,46 +1,113 @@
-import serverless from 'serverless-http';
 import app from './server.js';
 import db from './db.js';
 
 let dbInitialized = false;
-const handler = serverless(app);
+
+async function handleExpress(request, env, ctx) {
+  return new Promise((resolve) => {
+    const url = new URL(request.url);
+
+    const req = {
+      method: request.method,
+      url: url.pathname + url.search,
+      path: url.pathname,
+      query: Object.fromEntries(url.searchParams.entries()),
+      headers: Object.fromEntries(request.headers.entries()),
+      env: env
+    };
+
+    const responseHeaders = new Headers();
+    let statusCode = 200;
+    let bodySent = false;
+
+    const res = {
+      status(code) {
+        statusCode = code;
+        return this;
+      },
+      setHeader(name, value) {
+        responseHeaders.set(name, value);
+        return this;
+      },
+      header(name, value) {
+        responseHeaders.set(name, value);
+        return this;
+      },
+      json(data) {
+        if (bodySent) return;
+        bodySent = true;
+        responseHeaders.set('Content-Type', 'application/json');
+        resolve(new Response(JSON.stringify(data), { status: statusCode, headers: responseHeaders }));
+      },
+      send(data) {
+        if (bodySent) return;
+        bodySent = true;
+        const contentType = typeof data === 'object' ? 'application/json' : 'text/html; charset=utf-8';
+        if (!responseHeaders.has('Content-Type')) {
+          responseHeaders.set('Content-Type', contentType);
+        }
+        const bodyStr = typeof data === 'object' ? JSON.stringify(data) : String(data);
+        resolve(new Response(bodyStr, { status: statusCode, headers: responseHeaders }));
+      },
+      end(data) {
+        if (bodySent) return;
+        bodySent = true;
+        resolve(new Response(data || '', { status: statusCode, headers: responseHeaders }));
+      }
+    };
+
+    if (request.method !== 'GET' && request.method !== 'HEAD') {
+      request.text().then(textBody => {
+        try {
+          req.body = textBody ? JSON.parse(textBody) : {};
+        } catch (e) {
+          req.body = textBody;
+        }
+        app(req, res);
+      }).catch(() => {
+        req.body = {};
+        app(req, res);
+      });
+    } else {
+      req.body = {};
+      app(req, res);
+    }
+  });
+}
 
 export default {
   async fetch(request, env, ctx) {
-    if (env.DATABASE_URL && !process.env.DATABASE_URL) {
-      process.env.DATABASE_URL = env.DATABASE_URL;
-    }
-    if (env.POSTGRES_URL && !process.env.POSTGRES_URL) {
-      process.env.POSTGRES_URL = env.POSTGRES_URL;
-    }
+    try {
+      const url = new URL(request.url);
 
-    const url = new URL(request.url);
-
-    // API Routes MUST bypass static assets and go directly to Express
-    if (url.pathname.startsWith('/api')) {
-      if (!dbInitialized) {
-        try {
-          await db.initDb();
-          dbInitialized = true;
-        } catch (err) {
-          console.error('Worker DB Init Warning:', err.message);
+      if (url.pathname.startsWith('/api')) {
+        if (!dbInitialized) {
+          try {
+            await db.initDb(env);
+            dbInitialized = true;
+          } catch (err) {
+            console.warn('Worker DB Init Notice:', err.message);
+          }
         }
+        return await handleExpress(request, env, ctx);
       }
-      return handler(request, env, ctx);
-    }
 
-    // Static Frontend Assets (HTML, CSS, JS) served via Cloudflare ASSETS binding
-    if (env.ASSETS && typeof env.ASSETS.fetch === 'function') {
-      try {
+      if (env.ASSETS && typeof env.ASSETS.fetch === 'function') {
         const assetRes = await env.ASSETS.fetch(request);
-        if (assetRes.status < 400) {
+        if (assetRes && assetRes.status < 400) {
           return assetRes;
         }
-      } catch (e) {
-        // Fallback to Express handler
       }
-    }
 
-    return handler(request, env, ctx);
+      return await handleExpress(request, env, ctx);
+    } catch (err) {
+      return new Response(JSON.stringify({
+        error: 'Worker Execution Error',
+        message: err.message
+      }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
   }
 };

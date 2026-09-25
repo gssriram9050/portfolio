@@ -16,10 +16,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static assets (HTML, CSS, JS) from public folder or root
+// Serve static assets in Node.js server environment
 if (__dirname) {
-  app.use(express.static(path.join(__dirname, 'public')));
-  app.use(express.static(path.join(__dirname)));
+  try {
+    app.use(express.static(path.join(__dirname, 'public')));
+    app.use(express.static(path.join(__dirname)));
+  } catch (e) {
+    // Ignore static middleware in serverless isolates
+  }
 }
 
 // Health check endpoint
@@ -35,7 +39,19 @@ app.get('/api/health', (req, res) => {
 app.get('/api/profile', async (req, res) => {
   try {
     const profile = await db.getProfile();
-    res.json(profile);
+    res.json(profile || {
+      name: 'Your Name',
+      role: 'Full Stack Software Developer',
+      hero_summary: 'A dedicated developer passionate about building clean, efficient, and user-friendly full-stack web applications.',
+      about_text: 'Welcome to my portfolio! I specialize in full-stack web development with RESTful APIs and database solutions.',
+      tagline: 'Building robust & scalable full-stack applications',
+      email: 'developer@example.com',
+      phone: '+1 (000) 000-0000',
+      location: 'City, Country',
+      github_url: 'https://github.com/example',
+      linkedin_url: 'https://linkedin.com/in/example',
+      resume_url: '#'
+    });
   } catch (err) {
     console.error('Error fetching profile:', err);
     res.status(500).json({ error: 'Failed to retrieve profile data' });
@@ -45,7 +61,16 @@ app.get('/api/profile', async (req, res) => {
 app.get('/api/skills', async (req, res) => {
   try {
     const skills = await db.getSkills();
-    res.json(skills);
+    res.json(skills.length > 0 ? skills : [
+      { category: 'Programming Languages', name: 'JavaScript', display_order: 1 },
+      { category: 'Programming Languages', name: 'Python', display_order: 2 },
+      { category: 'Web Technologies', name: 'HTML5', display_order: 3 },
+      { category: 'Web Technologies', name: 'CSS3', display_order: 4 },
+      { category: 'Web Technologies', name: 'Node.js', display_order: 5 },
+      { category: 'Web Technologies', name: 'Express.js', display_order: 6 },
+      { category: 'Databases', name: 'PostgreSQL', display_order: 7 },
+      { category: 'Databases', name: 'SQLite', display_order: 8 }
+    ]);
   } catch (err) {
     console.error('Error fetching skills:', err);
     res.status(500).json({ error: 'Failed to retrieve skills data' });
@@ -55,7 +80,30 @@ app.get('/api/skills', async (req, res) => {
 app.get('/api/projects', async (req, res) => {
   try {
     const projects = await db.getProjects();
-    res.json(projects);
+    res.json(projects.length > 0 ? projects : [
+      {
+        id: 1,
+        title: 'Full Stack Personal Portfolio',
+        description: 'A responsive, database-driven personal portfolio showcase built with Node.js, Express, HTML/CSS/JS, and SQL database.',
+        long_description: 'This project implements a complete generic personal portfolio template with a RESTful backend API and database integration.',
+        number_label: '01',
+        tags: 'Node.js, Express, HTML, CSS, JavaScript, PostgreSQL',
+        demo_url: '#',
+        repo_url: '#',
+        display_order: 1
+      },
+      {
+        id: 2,
+        title: 'Task Management Application',
+        description: 'A full-stack task organizer allowing users to create, categorize, update, and track status of daily tasks.',
+        long_description: 'Features a clean UI connected to RESTful endpoints for CRUD operations on tasks and persistent storage.',
+        number_label: '02',
+        tags: 'JavaScript, Node.js, Express, REST API, Database',
+        demo_url: '#',
+        repo_url: '#',
+        display_order: 2
+      }
+    ]);
   } catch (err) {
     console.error('Error fetching projects:', err);
     res.status(500).json({ error: 'Failed to retrieve projects data' });
@@ -79,7 +127,16 @@ app.get('/api/projects/:id', async (req, res) => {
 app.get('/api/education', async (req, res) => {
   try {
     const education = await db.getEducation();
-    res.json(education);
+    res.json(education.length > 0 ? education : [
+      {
+        id: 1,
+        institution: 'University / Institution Name',
+        degree: 'Bachelor of Technology / Science in Computer Science / IT',
+        location: 'City, Country',
+        period: '2021 - 2025',
+        display_order: 1
+      }
+    ]);
   } catch (err) {
     console.error('Error fetching education:', err);
     res.status(500).json({ error: 'Failed to retrieve education data' });
@@ -89,7 +146,17 @@ app.get('/api/education', async (req, res) => {
 app.get('/api/experience', async (req, res) => {
   try {
     const experience = await db.getExperience();
-    res.json(experience);
+    res.json(experience.length > 0 ? experience : [
+      {
+        id: 1,
+        role: 'Full Stack Development Intern',
+        company: 'Technology Internship Program',
+        location: 'Remote',
+        period: '2024 - Present',
+        description: 'Developed web applications, designed database schemas, built RESTful backend services with Express.js.',
+        display_order: 1
+      }
+    ]);
   } catch (err) {
     console.error('Error fetching experience:', err);
     res.status(500).json({ error: 'Failed to retrieve experience data' });
@@ -129,23 +196,29 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-// Fallback to index.html for non-API routes
+// JSON Fallback for unknown API routes
+app.use('/api', (req, res) => {
+  res.status(404).json({ error: 'API route not found' });
+});
+
+// Fallback to index.html ONLY when running in standard Node.js server mode
 app.use((req, res, next) => {
-  if (req.method === 'GET' && !req.path.startsWith('/api') && __dirname) {
-    const publicIndexPath = path.join(__dirname, 'public', 'index.html');
-    const rootIndexPath = path.join(__dirname, 'index.html');
-    const fs = require('fs');
-    if (fs && fs.existsSync && fs.existsSync(publicIndexPath)) {
-      return res.sendFile(publicIndexPath);
-    } else if (fs && fs.existsSync && fs.existsSync(rootIndexPath)) {
-      return res.sendFile(rootIndexPath);
-    }
+  if (req.method === 'GET' && !req.path.startsWith('/api') && typeof process !== 'undefined' && process.release && process.release.name === 'node') {
+    try {
+      const publicIndexPath = path.join(__dirname, 'public', 'index.html');
+      const rootIndexPath = path.join(__dirname, 'index.html');
+      const fs = require('fs');
+      if (fs.existsSync(publicIndexPath)) {
+        return res.sendFile(publicIndexPath);
+      } else if (fs.existsSync(rootIndexPath)) {
+        return res.sendFile(rootIndexPath);
+      }
+    } catch (e) {}
   }
   next();
 });
 
-// If executed directly via node server.js
-if (process.argv[1] && process.argv[1].endsWith('server.js')) {
+if (process.argv && process.argv[1] && process.argv[1].endsWith('server.js')) {
   db.initDb()
     .then(() => {
       console.log('Database initialized successfully.');

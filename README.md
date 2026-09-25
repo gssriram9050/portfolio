@@ -122,14 +122,16 @@ The backend exposes the following RESTful endpoints:
 - **Production PostgreSQL:** Supply a valid PostgreSQL connection string in the `DATABASE_URL` environment variable. On startup, the backend automatically creates tables and seeds default data if tables are empty.
 
 ## Deployment
-This repository contains the complete full-stack portfolio code ready for deployment:
+This repository contains the complete full-stack portfolio code ready for Cloudflare Workers deployment:
 
 1. **GitHub Repository:** `https://github.com/gssriram9050/portfolio.git`
-2. **Cloudflare / Web Service Deployment:**
-   - **Frontend:** Static assets (`index.html`, `style.css`, `script.js`) can be served via Cloudflare Pages or Express static server.
-   - **Backend & Database:** Deploy `server.js` with `DATABASE_URL` (PostgreSQL) to your preferred Node.js runtime host or web service container.
+2. **Cloudflare Worker Deployment:**
+   - **Worker Name:** `portfolio`
+   - **Frontend:** Static assets (`index.html`, `style.css`, `script.js`) served via Cloudflare `ASSETS` binding from `./public`.
+   - **Backend & Database:** Express REST API served via `worker.js` with `nodejs_compat` enabled, connecting to PostgreSQL via `DATABASE_URL`.
 
 ## Live Demo
+- **Live Worker URL:** [https://portfolio.gssriram.workers.dev/](https://portfolio.gssriram.workers.dev/)
 - **Repository:** [https://github.com/gssriram9050/portfolio.git](https://github.com/gssriram9050/portfolio.git)
 
 ## GitHub
