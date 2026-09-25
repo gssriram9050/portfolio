@@ -11,7 +11,18 @@ const app = express();
 const PORT = (typeof process !== 'undefined' && process.env && process.env.PORT) || 5000;
 
 app.use(cors());
-app.use(express.json());
+
+// Body parser middleware supporting pre-parsed req.body from worker.js
+app.use((req, res, next) => {
+  if (req.body && typeof req.body === 'object' && Object.keys(req.body).length > 0) {
+    return next();
+  }
+  express.json()(req, res, (err) => {
+    if (err) req.body = {};
+    next();
+  });
+});
+
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static assets in Node.js server environment
@@ -162,7 +173,7 @@ app.get('/api/experience', async (req, res) => {
 });
 
 app.post('/api/contact', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, message } = req.body || {};
 
   if (!name || !email || !message) {
     return res.status(400).json({
@@ -180,7 +191,7 @@ app.post('/api/contact', async (req, res) => {
   }
 
   try {
-    await db.saveContactMessage(name.trim(), email.trim(), message.trim(), req.env);
+    await db.saveContactMessage(String(name).trim(), String(email).trim(), String(message).trim(), req.env);
     res.status(201).json({
       success: true,
       message: 'Thank you! Your message has been stored in the database.'

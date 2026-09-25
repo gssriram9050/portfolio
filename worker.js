@@ -80,6 +80,18 @@ export default {
     try {
       const url = new URL(request.url);
 
+      // Handle root '/' by serving '/index.html' static asset
+      if (url.pathname === '/' || url.pathname === '') {
+        if (env.ASSETS && typeof env.ASSETS.fetch === 'function') {
+          const indexReq = new Request(new URL('/index.html', request.url), request);
+          const assetRes = await env.ASSETS.fetch(indexReq);
+          if (assetRes && assetRes.status < 400) {
+            return assetRes;
+          }
+        }
+      }
+
+      // Handle API routes via Express app
       if (url.pathname.startsWith('/api')) {
         if (!dbInitialized) {
           try {
@@ -92,6 +104,7 @@ export default {
         return await handleExpress(request, env, ctx);
       }
 
+      // Handle static assets (HTML/CSS/JS) via Cloudflare ASSETS binding
       if (env.ASSETS && typeof env.ASSETS.fetch === 'function') {
         const assetRes = await env.ASSETS.fetch(request);
         if (assetRes && assetRes.status < 400) {
