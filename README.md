@@ -122,21 +122,18 @@ The backend exposes the following RESTful endpoints:
 - **Production PostgreSQL:** Supply a valid PostgreSQL connection string in the `DATABASE_URL` environment variable. On startup, the backend automatically creates tables and seeds default data if tables are empty.
 
 ## Deployment
-This project is configured for free cloud hosting platforms such as **Render**, **Koyeb**, or **Railway**:
+This repository contains the complete full-stack portfolio code ready for deployment:
 
-1. Push your source code repository to GitHub.
-2. Log into [Render](https://render.com/) or your preferred hosting platform.
-3. Create a new **Web Service** pointing to your GitHub repository.
-4. Set the build and start commands:
-   - **Build Command:** `npm install`
-   - **Start Command:** `node server.js`
-5. (Optional) Provision a free PostgreSQL database (e.g., Neon or Render Postgres) and attach the `DATABASE_URL` environment variable to the Web Service.
+1. **GitHub Repository:** `https://github.com/gssriram9050/portfolio.git`
+2. **Cloudflare / Web Service Deployment:**
+   - **Frontend:** Static assets (`index.html`, `style.css`, `script.js`) can be served via Cloudflare Pages or Express static server.
+   - **Backend & Database:** Deploy `server.js` with `DATABASE_URL` (PostgreSQL) to your preferred Node.js runtime host or web service container.
 
 ## Live Demo
-- **Live Application URL:** `https://your-app-name.onrender.com` *(Replace with your live deployed web service URL)*
+- **Repository:** [https://github.com/gssriram9050/portfolio.git](https://github.com/gssriram9050/portfolio.git)
 
 ## GitHub
-- **Repository URL:** `https://github.com/your-username/your-portfolio-repo` *(Replace with your GitHub repository URL)*
+- **Repository URL:** `https://github.com/gssriram9050/portfolio.git`
 
 ## Internship Attribution
 This project was developed as part of the **Full Stack Development Internship** at **Thiranex Education LLP**.
