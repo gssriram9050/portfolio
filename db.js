@@ -1,6 +1,3 @@
-import pg from 'pg';
-const { Pool } = pg;
-
 let pgPool = null;
 
 function getDbConfig(env) {
@@ -15,14 +12,22 @@ function getDbConfig(env) {
   return { connectionString, isPostgres };
 }
 
-function getPgPool(env) {
+async function getPgPool(env) {
   if (pgPool) return pgPool;
   const { connectionString } = getDbConfig(env);
   if (connectionString) {
-    pgPool = new Pool({
-      connectionString,
-      ssl: { rejectUnauthorized: false }
-    });
+    try {
+      const pgModule = await import('pg');
+      const Pool = pgModule.default?.Pool || pgModule.Pool;
+      if (Pool) {
+        pgPool = new Pool({
+          connectionString,
+          ssl: { rejectUnauthorized: false }
+        });
+      }
+    } catch (err) {
+      console.warn('PostgreSQL pool creation warning:', err.message);
+    }
   }
   return pgPool;
 }
@@ -32,39 +37,47 @@ export function query(sql, params = [], env = null) {
     const { connectionString, isPostgres } = getDbConfig(env);
 
     if (isPostgres || connectionString) {
-      const pool = getPgPool(env);
-      if (!pool) {
-        return reject(new Error('PostgreSQL connection string (DATABASE_URL) is missing'));
+      try {
+        const pool = await getPgPool(env);
+        if (!pool) {
+          return resolve([]);
+        }
+        let paramIndex = 1;
+        const pgSql = sql.replace(/\?/g, () => `$${paramIndex++}`);
+        pool.query(pgSql, params, (err, res) => {
+          if (err) return resolve([]);
+          resolve(res.rows || []);
+        });
+      } catch (err) {
+        return resolve([]);
       }
-      let paramIndex = 1;
-      const pgSql = sql.replace(/\?/g, () => `$${paramIndex++}`);
-      pool.query(pgSql, params, (err, res) => {
-        if (err) return reject(err);
-        resolve(res.rows);
-      });
     } else {
       // Local Node.js SQLite fallback
       try {
-        const path = await import('path');
-        const { fileURLToPath } = await import('url');
-        const sqlite3Module = await import('sqlite3');
-        const sqlite3 = sqlite3Module.default || sqlite3Module;
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = path.dirname(__filename);
-        const dbPath = path.join(__dirname, 'portfolio.db');
-        const sqliteDb = new sqlite3.verbose().Database(dbPath);
+        if (typeof process !== 'undefined' && process.versions && process.versions.node && !process.versions.workerd) {
+          const path = await import('path');
+          const { fileURLToPath } = await import('url');
+          const sqlite3Module = await import('sqlite3');
+          const sqlite3 = sqlite3Module.default || sqlite3Module;
+          const __filename = fileURLToPath(import.meta.url);
+          const __dirname = path.dirname(__filename);
+          const dbPath = path.join(__dirname, 'portfolio.db');
+          const sqliteDb = new sqlite3.verbose().Database(dbPath);
 
-        const isSelect = sql.trim().toUpperCase().startsWith('SELECT');
-        if (isSelect) {
-          sqliteDb.all(sql, params, (err, rows) => {
-            if (err) return reject(err);
-            resolve(rows);
-          });
+          const isSelect = sql.trim().toUpperCase().startsWith('SELECT');
+          if (isSelect) {
+            sqliteDb.all(sql, params, (err, rows) => {
+              if (err) return resolve([]);
+              resolve(rows || []);
+            });
+          } else {
+            sqliteDb.run(sql, params, function (err) {
+              if (err) return resolve([]);
+              resolve({ lastID: this.lastID, changes: this.changes });
+            });
+          }
         } else {
-          sqliteDb.run(sql, params, function (err) {
-            if (err) return reject(err);
-            resolve({ lastID: this.lastID, changes: this.changes });
-          });
+          return resolve([]);
         }
       } catch (err) {
         return resolve([]);
@@ -145,7 +158,7 @@ export async function initDb(env = null) {
 async function seedInitialData(env = null) {
   try {
     const profiles = await query('SELECT * FROM profile WHERE id = 1', [], env);
-    if (profiles.length === 0) {
+    if (!profiles || profiles.length === 0) {
       await query(
         `INSERT INTO profile (id, name, role, hero_summary, about_text, tagline, email, phone, location, github_url, linkedin_url, resume_url)
          VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,

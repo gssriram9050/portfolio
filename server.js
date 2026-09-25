@@ -1,5 +1,3 @@
-import dotenv from 'dotenv';
-dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
@@ -10,7 +8,7 @@ const __filename = typeof import.meta !== 'undefined' && import.meta.url ? fileU
 const __dirname = __filename ? path.dirname(__filename) : '';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = (typeof process !== 'undefined' && process.env && process.env.PORT) || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -38,7 +36,7 @@ app.get('/api/health', (req, res) => {
 // API Routes
 app.get('/api/profile', async (req, res) => {
   try {
-    const profile = await db.getProfile();
+    const profile = await db.getProfile(req.env);
     res.json(profile || {
       name: 'Your Name',
       role: 'Full Stack Software Developer',
@@ -60,7 +58,7 @@ app.get('/api/profile', async (req, res) => {
 
 app.get('/api/skills', async (req, res) => {
   try {
-    const skills = await db.getSkills();
+    const skills = await db.getSkills(req.env);
     res.json(skills.length > 0 ? skills : [
       { category: 'Programming Languages', name: 'JavaScript', display_order: 1 },
       { category: 'Programming Languages', name: 'Python', display_order: 2 },
@@ -79,7 +77,7 @@ app.get('/api/skills', async (req, res) => {
 
 app.get('/api/projects', async (req, res) => {
   try {
-    const projects = await db.getProjects();
+    const projects = await db.getProjects(req.env);
     res.json(projects.length > 0 ? projects : [
       {
         id: 1,
@@ -112,7 +110,7 @@ app.get('/api/projects', async (req, res) => {
 
 app.get('/api/projects/:id', async (req, res) => {
   try {
-    const projects = await db.getProjects();
+    const projects = await db.getProjects(req.env);
     const proj = projects.find(p => p.id === parseInt(req.params.id, 10));
     if (!proj) {
       return res.status(404).json({ error: 'Project not found' });
@@ -126,7 +124,7 @@ app.get('/api/projects/:id', async (req, res) => {
 
 app.get('/api/education', async (req, res) => {
   try {
-    const education = await db.getEducation();
+    const education = await db.getEducation(req.env);
     res.json(education.length > 0 ? education : [
       {
         id: 1,
@@ -145,7 +143,7 @@ app.get('/api/education', async (req, res) => {
 
 app.get('/api/experience', async (req, res) => {
   try {
-    const experience = await db.getExperience();
+    const experience = await db.getExperience(req.env);
     res.json(experience.length > 0 ? experience : [
       {
         id: 1,
@@ -182,7 +180,7 @@ app.post('/api/contact', async (req, res) => {
   }
 
   try {
-    await db.saveContactMessage(name.trim(), email.trim(), message.trim());
+    await db.saveContactMessage(name.trim(), email.trim(), message.trim(), req.env);
     res.status(201).json({
       success: true,
       message: 'Thank you! Your message has been stored in the database.'
@@ -218,7 +216,7 @@ app.use((req, res, next) => {
   next();
 });
 
-if (process.argv && process.argv[1] && process.argv[1].endsWith('server.js')) {
+if (typeof process !== 'undefined' && Array.isArray(process.argv) && process.argv[1] && process.argv[1].endsWith('server.js')) {
   db.initDb()
     .then(() => {
       console.log('Database initialized successfully.');
