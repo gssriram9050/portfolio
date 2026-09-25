@@ -1,7 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const sqlite3 = require('sqlite3').verbose();
-const { Pool } = require('pg');
+import pg from 'pg';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const { Pool } = pg;
+const __filename = typeof import.meta !== 'undefined' && import.meta.url ? fileURLToPath(import.meta.url) : '';
+const __dirname = __filename ? path.dirname(__filename) : '';
 
 let pgPool = null;
 let sqliteDb = null;
@@ -11,18 +14,25 @@ if (isPostgres) {
   const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL;
   pgPool = new Pool({
     connectionString,
-    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
+    ssl: process.env.NODE_ENV === 'production' || process.env.DATABASE_URL
+      ? { rejectUnauthorized: false }
+      : false
   });
 } else {
-  const dbPath = path.join(__dirname, 'portfolio.db');
-  sqliteDb = new sqlite3.Database(dbPath);
+  try {
+    const sqlite3Module = await import('sqlite3');
+    const sqlite3 = sqlite3Module.default || sqlite3Module;
+    const dbPath = path.join(__dirname, 'portfolio.db');
+    sqliteDb = new sqlite3.verbose().Database(dbPath);
+  } catch (err) {
+    console.warn('SQLite initialization skipped in edge runtime:', err.message);
+  }
 }
 
-// SQL Helper to work with both PostgreSQL and SQLite
-function query(sql, params = []) {
+export function query(sql, params = []) {
   return new Promise((resolve, reject) => {
     if (isPostgres) {
-      // Convert SQLite '?' placeholders to PostgreSQL '$1', '$2', etc.
+      if (!pgPool) return reject(new Error('PostgreSQL pool is not configured'));
       let paramIndex = 1;
       const pgSql = sql.replace(/\?/g, () => `$${paramIndex++}`);
       pgPool.query(pgSql, params, (err, res) => {
@@ -30,7 +40,7 @@ function query(sql, params = []) {
         resolve(res.rows);
       });
     } else {
-      // For SELECT queries or RETURNING queries
+      if (!sqliteDb) return reject(new Error('SQLite database is not initialized'));
       const isSelect = sql.trim().toUpperCase().startsWith('SELECT');
       if (isSelect) {
         sqliteDb.all(sql, params, (err, rows) => {
@@ -47,7 +57,7 @@ function query(sql, params = []) {
   });
 }
 
-async function initDb() {
+export async function initDb() {
   const createTablesSql = [
     `CREATE TABLE IF NOT EXISTS profile (
       id INTEGER PRIMARY KEY,
@@ -296,28 +306,28 @@ async function seedInitialData() {
   }
 }
 
-async function getProfile() {
+export async function getProfile() {
   const rows = await query('SELECT * FROM profile WHERE id = 1');
   return rows[0] || null;
 }
 
-async function getSkills() {
+export async function getSkills() {
   return await query('SELECT * FROM skills ORDER BY display_order ASC, id ASC');
 }
 
-async function getProjects() {
+export async function getProjects() {
   return await query('SELECT * FROM projects ORDER BY display_order ASC, id ASC');
 }
 
-async function getEducation() {
+export async function getEducation() {
   return await query('SELECT * FROM education ORDER BY display_order ASC, id ASC');
 }
 
-async function getExperience() {
+export async function getExperience() {
   return await query('SELECT * FROM experience ORDER BY display_order ASC, id ASC');
 }
 
-async function saveContactMessage(name, email, message) {
+export async function saveContactMessage(name, email, message) {
   const result = await query(
     'INSERT INTO contact_messages (name, email, message) VALUES (?, ?, ?)',
     [name, email, message]
@@ -325,11 +335,11 @@ async function saveContactMessage(name, email, message) {
   return result;
 }
 
-async function getContactMessages() {
+export async function getContactMessages() {
   return await query('SELECT * FROM contact_messages ORDER BY created_at DESC');
 }
 
-module.exports = {
+export default {
   query,
   initDb,
   getProfile,
