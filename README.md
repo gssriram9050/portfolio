@@ -131,8 +131,9 @@ This repository contains the complete full-stack portfolio code ready for Cloudf
    - **Backend & Database:** Express REST API served via `worker.js` with `nodejs_compat` enabled, connecting to PostgreSQL via `DATABASE_URL`.
 
 ## Live Demo
-- **Live Worker URL:** [https://portfolio.gssriram.workers.dev/](https://portfolio.gssriram.workers.dev/)
-- **Repository:** [https://github.com/gssriram9050/portfolio.git](https://github.com/gssriram9050/portfolio.git)
+- **Live Full-Stack Worker URL:** [https://portfolio.gssriram.workers.dev/](https://portfolio.gssriram.workers.dev/)
+- **GitHub Pages Redirect URL:** [https://gssriram9050.github.io/portfolio/](https://gssriram9050.github.io/portfolio/)
+- **GitHub Repository:** [https://github.com/gssriram9050/portfolio.git](https://github.com/gssriram9050/portfolio.git)
 
 ## GitHub
 - **Repository URL:** `https://github.com/gssriram9050/portfolio.git`
