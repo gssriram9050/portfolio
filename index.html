@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="3;url=https://portfolio.gssriram.workers.dev/">
+  <meta http-equiv="refresh" content="3;url=https://portfolio.gssriram.workers.dev">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Site Upgraded | Full-Stack Application</title>
+  <title>This site has moved | Personal Portfolio</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       background: #070b13;
       color: #f4f7fb;
       display: flex;
@@ -23,7 +23,7 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 16px;
       padding: 2.5rem;
-      max-width: 520px;
+      max-width: 500px;
       box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     }
     h1 {
@@ -40,11 +40,11 @@
     .timer-text {
       color: #ffcb6b;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-bottom: 1.75rem;
     }
     #countdown {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: #42e8c8;
     }
     a.btn {
@@ -65,29 +65,31 @@
 </head>
 <body>
   <div class="card">
-    <h1>Portfolio Upgraded to Full-Stack</h1>
+    <h1>This site has moved</h1>
     <p>
-      This personal portfolio project has been upgraded from a static HTML page to a complete full-stack web application built with Node.js, Express, and PostgreSQL, hosted on Cloudflare Workers.
+      This personal portfolio has been upgraded to a full-stack web application hosted on Cloudflare Workers with Node.js, Express, and PostgreSQL.
     </p>
     <div class="timer-text">
       Redirecting automatically in <span id="countdown">3</span> seconds...
     </div>
-    <a href="https://portfolio.gssriram.workers.dev/" class="btn">Click Here to Launch Live App Immediately</a>
+    <a href="https://portfolio.gssriram.workers.dev" class="btn">Go to the new portfolio</a>
   </div>
 
   <script>
-    let secondsLeft = 3;
-    const countdownEl = document.getElementById('countdown');
-    const timer = setInterval(() => {
-      secondsLeft--;
-      if (countdownEl) {
-        countdownEl.textContent = secondsLeft;
-      }
-      if (secondsLeft <= 0) {
-        clearInterval(timer);
-        window.location.href = "https://portfolio.gssriram.workers.dev/";
-      }
-    }, 1000);
+    if (window.location.hostname !== 'portfolio.gssriram.workers.dev') {
+      let secondsLeft = 3;
+      const countdownEl = document.getElementById('countdown');
+      const timer = setInterval(function() {
+        secondsLeft--;
+        if (countdownEl) {
+          countdownEl.textContent = secondsLeft;
+        }
+        if (secondsLeft <= 0) {
+          clearInterval(timer);
+          window.location.href = "https://portfolio.gssriram.workers.dev";
+        }
+      }, 1000);
+    }
   </script>
 </body>
 </html>
